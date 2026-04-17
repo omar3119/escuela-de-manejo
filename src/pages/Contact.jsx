@@ -1,0 +1,63 @@
+import { useState } from "react";
+
+import HeroMain from "../components/HeroMain";
+import CardContact from "../components/Contact/CardContact";
+import Faq from "../components/Contact/Faq";
+
+//Data
+import faqs from "../data/faqs";
+
+const Contact = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (index) => {
+    console.log(openIndex === index);
+    setOpenIndex(openIndex === index ? null : index);
+  };
+  return (
+    <div className="w-full ">
+      <div className="w-full bg-primary py-24 px-6 lg:flex lg:justify-center">
+        <div className="w-full lg:max-w-5xl">
+          <HeroMain
+            className=""
+            title="Toma el control de tu camino"
+            description="¿Tienes preguntas sobre nuestros
+cursos premium o la preparación
+para la licencia? Nuestros
+instructores expertos están listos
+para guiarte hacia la maestría
+automotriz."
+            colorTitle="text-white"
+            colorText="text-[#DBEAFE]"
+          />
+        </div>
+      </div>
+
+      <div className="w-full px-6  lg:flex lg:justify-center">
+        <div className="w-full lg:max-w-4xl">
+          <CardContact />
+        </div>
+      </div>
+      <section className=" w-full px-6 bg-[#F2F4F6]  lg:flex lg:justify-center">
+        <div className="w-full lg:max-w-5xl">
+          <h2 className="text-4xl font-bold text-primary mb-6 pt-24 text-center">
+            Preguntas Frecuentes
+          </h2>
+          <div className="flex flex-col gap-3">
+            {faqs.faqs.map((item, index) => (
+              <Faq
+                key={item.id}
+                question={item.question}
+                answer={item.answer}
+                isOpen={openIndex === index}
+                onClic={() => toggle(index)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Contact;

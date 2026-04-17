@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Basico",
+    "price": "$150",
+    "description": "Ideal para principiantes que quieren aprender lo esencial del manejo.",
+    "features": [
+      "5 Horas de Instrucción",
+      "Examen de Práctica Simulado",
+      "Vehículo para el Examen Oficial",
+      "Maestría en Maniobras Básicas"
+    ],
+    "color": "greenn"
+  },
+  {
+    "id": 2,
+    "title": "Intermedio",
+    "price": "$180",
+    "description": "Para quienes ya tienen nociones básicas y quieren ganar más confianza al volante.",
+    "features": [
+      "10 Horas de Instrucción",
+      "Clases en Autopista y Ciudad",
+      "Vehículo para el Examen Oficial",
+      "Técnicas de Manejo Defensivo"
+    ],
+    "color": "primary"
+  },
+  {
+    "id": 3,
+    "title": "Curso Completo",
+    "price": "$220",
+    "description": "La experiencia completa para dominar el manejo en cualquier situación y aprobar el examen.",
+    "features": [
+      "20 Horas de Instrucción",
+      "Clases Nocturnas y en Lluvia",
+      "Vehículo para el Examen Oficial",
+      "Soporte hasta Aprobar el Examen"
+    ],
+    "color": "secondary"
+
+  }
+]

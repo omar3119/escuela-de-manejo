@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Carlos Mendoza",
+    "opinion": "Excelente escuela, los instructores son muy pacientes y profesionales. Aprendí a manejar en tiempo récord.",
+    "calificacion": 5,
+    "borderColor": "border-[#8EABFF]"
+  },
+  {
+    "id": 2,
+    "name": "Sofía Herrera",
+    "opinion": "Muy buena experiencia, las clases prácticas son muy completas y el trato es muy amable.",
+    "calificacion": 5,
+    "borderColor": "border-[#FE9800]"
+  },
+  {
+    "id": 3,
+    "name": "Miguel Torres",
+    "opinion": "Recomiendo totalmente esta escuela, gracias a ellos obtuve mi licencia sin ningún problema.",
+    "calificacion": 4,
+    "borderColor": "border-[#FFE792]"
+  }
+]

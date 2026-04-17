@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icon": "FaCalendarAlt",
+    "title": "Flexibilidad Total",
+    "description": "Reserva, reprograma o cancela lecciones a través de nuestra aplicación móvil dedicada en segundos."
+  },
+  {
+    "id": 2,
+    "icon": "FaShieldAlt",
+    "title": "Instructores Certificados",
+    "description": "Todos nuestros instructores cuentan con certificación oficial y años de experiencia en la enseñanza."
+  },
+  {
+    "id": 3,
+    "icon": "FaCarSide",
+    "title": "Vehículos Modernos",
+    "description": "Aprende a manejar en autos equipados con doble pedal y tecnología de seguridad de última generación."
+  }
+]

@@ -1,0 +1,29 @@
+{
+    "faqs": [
+        {
+        "id": 1,
+        "question": "¿Cómo puedo inscribirme en un curso?",
+        "answer": "Puedes inscribirte en nuestros cursos a través de nuestro sitio web. Simplemente selecciona el curso que deseas y sigue las instrucciones para completar tu inscripción."
+        },
+        {
+        "id": 2,
+        "question": "¿Cuáles son los métodos de pago aceptados?",
+        "answer": "Aceptamos pagos con tarjeta de crédito, débito y transferencias bancarias. También ofrecemos opciones de financiamiento para algunos cursos."
+        },
+        {
+        "id": 3,
+        "question": "¿Puedo obtener un reembolso si no estoy satisfecho con el curso?",
+        "answer": "Sí, ofrecemos una política de reembolso dentro de los primeros 14 días después de la inscripción, siempre y cuando no hayas completado más del 20% del curso."
+        },
+        {
+        "id": 4,
+        "question": "¿Los cursos son en línea o presenciales?",
+        "answer": "Ofrecemos ambos tipos de cursos. Puedes elegir entre cursos en línea que puedes tomar desde cualquier lugar o cursos presenciales en nuestras instalaciones."
+        },
+        {
+        "id": 5,
+        "question": "¿Puedo acceder a los materiales del curso después de completarlo?",
+        "answer": "Sí, tendrás acceso a los materiales del curso incluso después de haberlo completado, para que puedas repasar y seguir aprendiendo."
+        }
+    ]
+}

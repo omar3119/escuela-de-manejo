@@ -1,0 +1,22 @@
+{
+    "services": [
+        {
+        "id": 1,
+        "title": "Curso de Manejo Básico",
+        "description": "Aprende las habilidades fundamentales para conducir de manera segura y confiada.",
+        "price": "$199"
+        },
+        {
+        "id": 2,
+        "title": "Curso de Manejo Avanzado",
+        "description": "Perfecciona tus habilidades de conducción con técnicas avanzadas y situaciones desafiantes.",
+        "price": "$299"
+        },
+        {
+        "id": 3,
+        "title": "Plan Completo",
+        "description": "Aprende a anticipar y evitar peligros en la carretera para una conducción más segura.",
+        "price": "$249"
+        }
+    ]
+}
