@@ -26,7 +26,7 @@ const infoContact = [
 ]
 const CardContact = () => {
     return(
-        <div className="w-full bg-[#1E40AF] px-6 py-8 rounded-lg shadow-md mt-6">
+        <div className="w-full bg-primary px-6 py-8 rounded-lg shadow-md mt-6">
             <h3 className="text-white text-xl font-bold mb-8">Detalles de Contacto</h3>
             <div className="w-full flex flex-col gap-6">
                 {

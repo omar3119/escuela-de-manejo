@@ -3,7 +3,7 @@ import { useState } from "react";
 import HeroMain from "../components/HeroMain";
 import CardContact from "../components/Contact/CardContact";
 import Faq from "../components/Contact/Faq";
-
+import Formulary  from "../components/Contact/formulary"
 //Data
 import faqs from "../data/faqs";
 
@@ -20,6 +20,7 @@ const Contact = () => {
         <div className="w-full lg:max-w-5xl">
           <HeroMain
             className=""
+//FAGS
             title="Toma el control de tu camino"
             description="¿Tienes preguntas sobre nuestros
 cursos premium o la preparación
@@ -32,17 +33,23 @@ automotriz."
           />
         </div>
       </div>
-
+<div>
+<Formulary/>
+</div>
       <div className="w-full px-6  lg:flex lg:justify-center">
         <div className="w-full lg:max-w-4xl">
           <CardContact />
         </div>
       </div>
+
+
+
       <section className=" w-full px-6 bg-[#F2F4F6]  lg:flex lg:justify-center">
         <div className="w-full lg:max-w-5xl">
           <h2 className="text-4xl font-bold text-primary mb-6 pt-24 text-center">
             Preguntas Frecuentes
           </h2>
+
           <div className="flex flex-col gap-3">
             {faqs.faqs.map((item, index) => (
               <Faq

@@ -6,9 +6,9 @@ const Faq = ({ question, answer, isOpen, onClic }) => {
         onClick={onClic}
         className="w-full flex justify-between items-center text-left font-medium text-gray-900 hover:text-gray-600 transition-colors"
       >
-        <span className="text-[#00288E] font-bold text-base">{question}</span>
+        <span className="text-primary font-bold text-base">{question}</span>
         <div>
-          <IoIosArrowForward className={`text-xl text-[#00288E] ${isOpen ? "transform rotate-90" : ""}`} />
+          <IoIosArrowForward className={`text-xl text-prymary ${isOpen ? "transform rotate-90" : ""}`} />
         </div>
       </button>
 
