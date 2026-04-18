@@ -3,7 +3,7 @@ import { useState } from "react";
 import HeroMain from "../components/HeroMain";
 import CardContact from "../components/Contact/CardContact";
 import Faq from "../components/Contact/Faq";
-import Formulary  from "../components/Contact/formulary"
+import Formulary from "../components/Contact/formulary";
 //Data
 import faqs from "../data/faqs";
 
@@ -20,7 +20,7 @@ const Contact = () => {
         <div className="w-full lg:max-w-5xl">
           <HeroMain
             className=""
-//FAGS
+            //FAGS
             title="Toma el control de tu camino"
             description="¿Tienes preguntas sobre nuestros
 cursos premium o la preparación
@@ -33,16 +33,17 @@ automotriz."
           />
         </div>
       </div>
-<div>
-<Formulary/>
-</div>
-      <div className="w-full px-6  lg:flex lg:justify-center">
-        <div className="w-full lg:max-w-4xl">
-          <CardContact />
+      <div className=" px-6 py-20  flex justify-center">
+        <div className=" w-full flex flex-col gap-10  max-w-lg lg:max-w-5xl  lg:flex-row lg:justify-between lg:gap-6">
+          <div className="w-full max-w-2xl">
+            <Formulary />
+          </div>
+
+          <div className="w-full">
+              <CardContact />
+          </div>
         </div>
       </div>
-
-
 
       <section className=" w-full px-6 bg-[#F2F4F6]  lg:flex lg:justify-center">
         <div className="w-full lg:max-w-5xl">

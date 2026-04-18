@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { LuSend } from "react-icons/lu";
 const programs = [
   "Architectural Foundations",
   "Urban Design",
@@ -35,8 +35,7 @@ export default function MissionBriefing() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
-      <div className="bg-white rounded-xl shadow-md p-10 w-full max-w-2xl">
+      <div className="bg-white rounded-xl shadow-md py-10 px-5 w-full">
 
         {/* Title */}
         <div className="flex items-center gap-3 mb-8">
@@ -48,9 +47,9 @@ export default function MissionBriefing() {
 
         {/* Name + Email */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-          <Field label="Candidate Name" error={errors.name}>
+          <Field label="Nombre" error={errors.name}>
             <input
-              name="name"
+              name="Nombre"
               value={form.name}
               onChange={handleChange}
               placeholder="e.g. Julian Vane"
@@ -59,9 +58,9 @@ export default function MissionBriefing() {
               }`}
             />
           </Field>
-          <Field label="Strategic Email" error={errors.email}>
+          <Field label="Email" error={errors.email}>
             <input
-              name="email"
+              name="Emai"
               type="email"
               value={form.email}
               onChange={handleChange}
@@ -102,13 +101,11 @@ export default function MissionBriefing() {
         {/* Button */}
         <button
           onClick={handleSubmit}
-          className="mt-2 flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-orange-500 text-white text-sm font-bold tracking-widest uppercase rounded-md transition-colors duration-200"
+          className="mt-2 cursor-pointer flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-orange-500 text-white text-sm font-bold tracking-widest uppercase rounded-md transition-colors duration-200"
         >
-          Deploy Message
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="22" y1="2" x2="11" y2="13" />
-            <polygon points="22 2 15 22 11 13 2 9 22 2" />
-          </svg>
+          Enviar
+          <LuSend className="text-xl" />
+         
         </button>
 
         {/* Toast */}
@@ -118,7 +115,6 @@ export default function MissionBriefing() {
           </div>
         )}
       </div>
-    </div>
   );
 }
 
