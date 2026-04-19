@@ -13,7 +13,6 @@ const Contact = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (index) => {
-    console.log(openIndex === index);
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
