@@ -1,12 +1,15 @@
 import ImageAbout from "../../assets/images/sobrenosotros.webp";
 
+import HeroLayout from "../../Layout/HeroLayout";
+
 import HeroMain from "../HeroMain";
 const HeroAbout = () => {
   return (
-    <div className="w-full py-10 lg:py-20">
+    <HeroLayout>
       <div className="inline-block bg-[#DDE1FF] text-primary font-semibold px-3 py-1 rounded-full mb-4">
         <span>Nuestra Misión</span>
       </div>
+
       <div className="w-full lg:flex lg:gap-20">
         <HeroMain
           title="Formando conductores seguros y confiados por 10 años"
@@ -27,7 +30,7 @@ const HeroAbout = () => {
           />
         </figure>
       </div>
-    </div>
+    </HeroLayout>
   );
 };
 

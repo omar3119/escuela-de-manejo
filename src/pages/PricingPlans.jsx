@@ -7,9 +7,11 @@ import datosPlanes from "../data/datosPlanes";
 import Card from "../components/Courses/CardServices";
 import HeroMain from "../components/HeroMain";
 import imgHeroPlans from "./../assets/images/img-hero-plans.png";
+
+import HeroLayot from "../Layout/HeroLayout";
 function PricingPlans() {
   console.log(datosPlanes);
-  const { counter} = useContext(counterContext);
+  const { counter } = useContext(counterContext);
   return (
     <div className="w-full md:flex md:flex-col md:items-center">
       <div className="w-full md:flex md:justify-center relative ">
@@ -20,22 +22,25 @@ function PricingPlans() {
           className="absolute w-full h-full top-0 object-cover"
         />
 
-        <div className="w-full px-6 py-20  z-50 md:max-w-130 lg:max-w-5xl  lg:px-0">
-          <div className="mb-4 relative z-100">
-            <span className="text-secondary text-xl font-semibold ">
-              Enciende tu confiaza 
-            </span>
-          </div>
 
-          <HeroMain
-            title="Domina la vía. Empodera tu futuro."
-            description=" Elige entre nuestros planes de estudio premium diseñados para
-          transformar aprendices en conductores expertos a través del
-          aprendizaje cinético y seguridad de nivel guardián."
-            colorTitle="text-[#FFFFFF]"
-            colorText="text-[#DBEAFE]"
-          />
-        </div>
+        <HeroLayot>
+            <div className="mb-4 relative z-100">
+              <span className="text-secondary text-xl font-semibold ">
+                Enciende tu confiaza
+              </span>
+            </div>
+
+            <HeroMain
+              title="Domina la vía. Empodera tu futuro."
+              description=" Elige entre nuestros planes de estudio premium diseñados para
+            transformar aprendices en conductores expertos a través del
+            aprendizaje cinético y seguridad de nivel guardián."
+              colorTitle="text-[#FFFFFF]"
+              colorText="text-[#DBEAFE]"
+            />
+        </HeroLayot>
+
+
       </div>
 
       <div className="px-6 mt-12  lg:flex lg:justify-center">
