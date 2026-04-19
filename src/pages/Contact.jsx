@@ -4,6 +4,8 @@ import HeroMain from "../components/HeroMain";
 import CardContact from "../components/Contact/CardContact";
 import Faq from "../components/Contact/Faq";
 import Formulary from "../components/Contact/formulary";
+
+import HeroLayout from "../Layout/HeroLayout";
 //Data
 import faqs from "../data/faqs";
 
@@ -16,21 +18,23 @@ const Contact = () => {
   };
   return (
     <div className="w-full ">
-      <div className="w-full bg-primary py-24 px-6 lg:flex lg:justify-center">
-        <div className="w-full lg:max-w-5xl">
-          <HeroMain
-            className=""
-            //FAGS
-            title="Toma el control de tu camino"
-            description="¿Tienes preguntas sobre nuestros
-cursos premium o la preparación
-para la licencia? Nuestros
-instructores expertos están listos
-para guiarte hacia la maestría
-automotriz."
-            colorTitle="text-white"
-            colorText="text-[#DBEAFE]"
-          />
+      <div className="w-full bg-primary">
+        <div className="w-full md:flex md:justify-center ">
+          <HeroLayout>
+            <HeroMain
+              className=""
+              //FAGS
+              title="Toma el control de tu camino"
+              description="¿Tienes preguntas sobre nuestros
+  cursos premium o la preparación
+  para la licencia? Nuestros
+  instructores expertos están listos
+  para guiarte hacia la maestría
+  automotriz."
+              colorTitle="text-white"
+              colorText="text-[#DBEAFE]"
+            />
+          </HeroLayout>
         </div>
       </div>
       <div className=" px-6 py-20  flex justify-center">
@@ -40,7 +44,7 @@ automotriz."
           </div>
 
           <div className="w-full">
-              <CardContact />
+            <CardContact />
           </div>
         </div>
       </div>

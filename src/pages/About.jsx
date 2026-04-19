@@ -2,13 +2,17 @@ import HeroAbout from "../components/About/HeroAbout";
 import CardList from "../components/About/CardList";
 import CardConductor from "../components/About/CardConductor";
 import CardCta from "../components/About/CardCta";
+
+
+import HeroLayout from "../Layout/HeroLayout";
 const About = () => {
   return (
     <div className="w-full md:flex md:justify-center bg-[#F7F9FB]">
       <div className="w-full">
-        <div className=" px-6 lg:flex lg:justify-center">
-          <div className="lg:max-w-5xl">
+        <div className="flex justify-center">
+          <div className="w-full md:flex md:justify-center lg:max-w-5xl">
             <HeroAbout />
+
           </div>
         </div>
 
