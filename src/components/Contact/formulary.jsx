@@ -32,6 +32,8 @@ export default function MissionBriefing() {
     setErrors({ ...errors, [e.target.name]: false });
   };
 
+
+  //HANDLE SUBMIT
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -102,9 +104,15 @@ const inputStyle = "w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-
         </div>
 
         {/* Program */}
-        <Field label="Program of Interest">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+          <Field label="Telefono">
+            <input name="from_phone" type="tel"className={`${inputStyle}`} />
+
+          </Field>
+        <Field label="Licencia a obtener">
           <select
-            name="program"
+            name="from_license"
             value={formData.program}
             onChange={handleChange}
             className="w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-sm outline-none focus:ring-2 focus:ring-slate-800 focus:bg-white transition appearance-none cursor-pointer"
@@ -114,6 +122,8 @@ const inputStyle = "w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-
             ))}
           </select>
         </Field>
+        </div>
+        
 
         {/* Objectives */}
         <Field label="Inquiry Objectives">

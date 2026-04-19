@@ -24,7 +24,7 @@ function PricingPlans() {
 
 
         <HeroLayot>
-            <div className="mb-4 relative z-100">
+            <div className="mb-4 relative z-50">
               <span className="text-secondary text-xl font-semibold ">
                 Enciende tu confiaza
               </span>
