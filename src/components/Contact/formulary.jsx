@@ -4,34 +4,26 @@ import emailjs from "@emailjs/browser";
 
 import Field from "../Formulary/Field";
 
-const programs = [
-  "A,C,D",
-  "E",
-  "Interior Architecture",
-  "Landscape Planning",
-];
+const programs = ["A,C,D", "E", "I"];
 
 export default function MissionBriefing() {
   const formRef = useRef();
   const [errors, setErrors] = useState({});
   const [sent, setSent] = useState(false);
 
-
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",
+    from_phone: "",
+    from_license: "",
     program: programs[0],
     message: "",
   });
-
-
-
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: false });
   };
-
 
   //HANDLE SUBMIT
   const handleSubmit = (e) => {
@@ -47,15 +39,20 @@ export default function MissionBriefing() {
 
     emailjs
       .sendForm(
-       import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(() => {
         setSent(true);
         formRef.current.reset();
-        setFormData({ from_name: "", from_email: "", program: programs[0], message: "" });
+        setFormData({
+          from_name: "",
+          from_email: "",
+          program: programs[0],
+          message: "",
+        });
         setTimeout(() => setSent(false), 3000);
       })
       .catch((error) => {
@@ -63,8 +60,8 @@ export default function MissionBriefing() {
       });
   };
 
-
-const inputStyle = "w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-sm outline-none focus:ring-2 focus:ring-slate-800 focus:bg-white transition placeholder:text-gray-400"
+  const inputStyle =
+    "w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-sm outline-none focus:ring-2 focus:ring-slate-800 focus:bg-white transition placeholder:text-gray-400";
   return (
     <div className="bg-white rounded-xl shadow-md py-10 px-5 w-full">
       {/* Title */}
@@ -107,23 +104,28 @@ const inputStyle = "w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
           <Field label="Telefono">
-            <input name="from_phone" type="tel"className={`${inputStyle}`} />
-
-          </Field>
-        <Field label="Licencia a obtener">
-          <select
-            name="from_license"
-            value={formData.program}
+            <input
+              name="from_phone"
+              value={formData.from_phone}
             onChange={handleChange}
-            className="w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-sm outline-none focus:ring-2 focus:ring-slate-800 focus:bg-white transition appearance-none cursor-pointer"
-          >
-            {programs.map((p) => (
-              <option key={p}>{p}</option>
-            ))}
-          </select>
-        </Field>
+
+              type="tel"
+              className={`${inputStyle}`}
+            />
+          </Field>
+          <Field label="Licencia a obtener">
+            <select
+              name="from_license"
+              value={formData.from_license}
+              onChange={handleChange}
+              className="w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-sm outline-none focus:ring-2 focus:ring-slate-800 focus:bg-white transition appearance-none cursor-pointer"
+            >
+              {programs.map((p) => (
+                <option key={p}>{p}</option>
+              ))}
+            </select>
+          </Field>
         </div>
-        
 
         {/* Objectives */}
         <Field label="Inquiry Objectives">
@@ -156,4 +158,3 @@ const inputStyle = "w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-
     </div>
   );
 }
-
