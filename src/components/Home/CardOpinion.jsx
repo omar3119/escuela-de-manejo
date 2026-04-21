@@ -2,10 +2,16 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 //Home
 
 
-const CardOpinion = ({name, testimonial, borderTestimonial}) => {
+const CardOpinion = ({ name, testimonial, accent }) => {
   return (
-    <div className={`bg-[#1A2445] rounded-lg p-8 mt-5 border-l-2 ${borderTestimonial}  relative flex flex-col lg:justify-between max-w-md mx-auto lg:max-w-95.5`}>
-      <span className="text-[#b5650398]  text-3xl leading-none block mb-4 absolute -top-3 -left-3">
+    <div
+      className="bg-[#1A2445] rounded-lg p-8 mt-5 border-l-2 relative flex flex-col lg:justify-between max-w-md mx-auto lg:max-w-95.5"
+      style={{ borderLeftColor: accent }}
+    >
+      <span
+        className="text-3xl leading-none block mb-4 absolute -top-3 -left-3"
+        style={{ color: accent }}
+      >
         <RiDoubleQuotesL />
       </span>
 
