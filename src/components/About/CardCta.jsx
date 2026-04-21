@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CardCta = () => {
   return (
     <div className="w-full py-10 flex justify-center">
-      <div className="bg-primary text-white max-w-md w-full rounded-[40px] px-8 py-12 text-center shadow-lg">
+      <div className="bg-primary text-white max-w-md w-full rounded-lg px-8 py-12 text-center shadow-lg">
         
         <h2 className="text-3xl font-bold mb-4">
           ¿Listo para tomar el volante?
