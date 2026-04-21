@@ -19,6 +19,7 @@ const HeroAbout = () => {
           colorTitle="text-[#00288E]"
           colorTitle2="text-[#FD761A]"
           colorText="text-[#444653]"
+          textAlign="text-left"
         />
 
         <figure className="w-full mt-10 relative flex justify-center md:w-8/10 lg:w-300 ">

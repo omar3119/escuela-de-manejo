@@ -17,8 +17,8 @@ function Home() {
       <div className="w-full px-6 mt-10 lg:flex ">
         <div className=" w-full">
           <div className="md:max-w-130 md:mx-auto lg:py-24 lg:lg:max-w-5xl">
-            <div className="max-w-150">
-              <h2 className="text-3xl font-extrabold text-primary pb-5 lg:text-4xl lg:leading-15">
+            <div className="max-w-150 mx-auto text-center">
+              <h2 className="text-3xl font-extrabold text-primary pb-5 text-center lg:text-4xl lg:leading-15">
                 Formamos Conductores y Construimos Confianza
               </h2>
               <p className="text-lg text-[#444653]">

@@ -1,4 +1,4 @@
-import { IoIosArrowForward } from "react-icons/io";
+import { IoAdd } from "react-icons/io5";
 const Faq = ({ question, answer, isOpen, onClic }) => {
   return (
     <div className="bg-white rounded-xl border-gray-200 p-6 cursor-pointer">
@@ -8,7 +8,11 @@ const Faq = ({ question, answer, isOpen, onClic }) => {
       >
         <span className="text-primary font-bold text-base">{question}</span>
         <div>
-          <IoIosArrowForward className={`text-xl text-prymary ${isOpen ? "transform rotate-90" : ""}`} />
+          <IoAdd
+            className={`text-2xl text-primary transition-transform duration-300 ${
+              isOpen ? "rotate-90" : "rotate-0"
+            }`}
+          />
         </div>
       </button>
 

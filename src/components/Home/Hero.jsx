@@ -9,7 +9,7 @@ import HeroLayout from "../../Layout/HeroLayout";
 const Hero = () => {
   return (
     <section className="w-full relative  text-white md:flex md:items-center md:justify-center ">
-      <div className="absolute top-0 w-full h-full bg-[#000000a8] bg-gradient-to-r from-[#0A122B] via-[#0a122bbd] to-[#04132900] z-10"></div>
+      <div className="absolute top-0 w-full h-full bg-[#000000a8] bg-linear-to-r from-[#0A122B] via-[#0a122bbd] to-[#04132900] z-10"></div>
       <img
         src={mainHero}
         alt=""
@@ -25,7 +25,7 @@ const Hero = () => {
             colorTitle2="text-[#60A5FA]"
             colorText="text-[#DBEAFE]"
           />
-          <div className="w-full  z-10  mt-6">
+          <div className="w-full z-10 mt-6 flex justify-center">
             <Link
               to="/planes"
               className="inline-block px-10 py-3 font-semibold bg-secondary rounded-lg "

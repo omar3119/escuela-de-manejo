@@ -20,6 +20,8 @@ import faqs from "../data/faqs";
 
 const Contact = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const leftColumnFaqs = faqs.faqs.filter((_, index) => index % 2 === 0);
+  const rightColumnFaqs = faqs.faqs.filter((_, index) => index % 2 !== 0);
 
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -70,20 +72,39 @@ const Contact = () => {
 
       <section className=" w-full px-6 bg-[#F2F4F6]  lg:flex lg:justify-center">
         <div className="w-full lg:max-w-5xl">
-          <h2 className="text-4xl font-bold text-primary mb-6 pt-24 text-center">
+          <h2 className="text-4xl font-bold text-primary mb-14 pt-24 text-center">
             Preguntas Frecuentes
           </h2>
 
-          <div className="flex flex-col gap-3">
-            {faqs.faqs.map((item, index) => (
-              <Faq
-                key={item.id}
-                question={item.question}
-                answer={item.answer}
-                isOpen={openIndex === index}
-                onClic={() => toggle(index)}
-              />
-            ))}
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:gap-3">
+            <div className="flex w-full flex-col gap-3">
+              {leftColumnFaqs.map((item) => {
+                const faqIndex = faqs.faqs.findIndex((faq) => faq.id === item.id);
+                return (
+                  <Faq
+                    key={item.id}
+                    question={item.question}
+                    answer={item.answer}
+                    isOpen={openIndex === faqIndex}
+                    onClic={() => toggle(faqIndex)}
+                  />
+                );
+              })}
+            </div>
+            <div className="flex w-full flex-col gap-3">
+              {rightColumnFaqs.map((item) => {
+                const faqIndex = faqs.faqs.findIndex((faq) => faq.id === item.id);
+                return (
+                  <Faq
+                    key={item.id}
+                    question={item.question}
+                    answer={item.answer}
+                    isOpen={openIndex === faqIndex}
+                    onClic={() => toggle(faqIndex)}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

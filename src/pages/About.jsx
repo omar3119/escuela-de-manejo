@@ -16,9 +16,9 @@ const About = () => {
           </div>
         </div>
         <div className="w-full bg-[#F2F4F6]  lg:flex lg:justify-center">
-          <div className="w-full px-6 py-24 lg:max-w-5xl ">
+          <div className="w-full px-6 py-24 md:mx-auto md:max-w-130 lg:max-w-6xl ">
             <div className="">
-              <div className="pb-16">
+              <div className="pb-16 text-center">
                 <h2 className="text-4xl font-bold text-primary pb-6 ">
                   Nuestra Flota
                 </h2>
@@ -38,8 +38,8 @@ const About = () => {
 
         <div className="px-6">
           <div className="pt-20  pb-6  lg:pt-24  lg:flex lg:justify-center">
-            <div className="w-full lg:max-w-5xl">
-              <div>
+            <div className="w-full md:mx-auto md:max-w-130 lg:max-w-5xl">
+              <div className="text-center">
                 <h2 className="text-4xl font-bold text-primary">
                   Nuestros Conductores
                 </h2>
