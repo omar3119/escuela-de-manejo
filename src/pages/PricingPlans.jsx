@@ -17,7 +17,7 @@ function PricingPlans() {
 
       {/* //HERO----- */}
       <div className="w-full md:flex md:justify-center relative ">
-        <div className="w-full h-full bg-[#000000a8] absolute z-50 bg-gradient-to-r from-[#01051a] via-[#041329ad] to-[#04132900]"></div>
+        <div className="w-full h-full bg-[#000000a8] absolute z-50 bg-linear-to-r from-[#01051a] via-[#041329ad] to-[#04132900]"></div>
         <img
           src={imgHeroPlans}
           alt=""
