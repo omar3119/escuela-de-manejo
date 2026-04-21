@@ -15,7 +15,6 @@ const About = () => {
 
           </div>
         </div>
-
         <div className="w-full bg-[#F2F4F6]  lg:flex lg:justify-center">
           <div className="w-full px-6 py-24 lg:max-w-5xl ">
             <div className="">

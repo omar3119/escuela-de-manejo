@@ -3,7 +3,7 @@ import CardOpinion from "./CardOpinion";
 import feedback from "../../data/feedback.json";
 const OpinionsUsers = () => {
   return (
-    <div className="w-full bg-[#0A122B] lg:flex lg:justify-center">
+    <div className="w-full bg-primary lg:flex lg:justify-center">
       <div className="px-6 py-18 lg:py-24 lg:max-w-5xl">
         <div className="">
           <div className="w-full flex justify-center lg:justify-between">
@@ -22,6 +22,7 @@ const OpinionsUsers = () => {
           <div className="flex flex-col gap-5 lg:flex lg:flex-row">
             {feedback.map((feedback) => (
               <CardOpinion
+                key={feedback.id}
                 name={feedback.name}
                 testimonial={feedback.opinion}
                 borderTestimonial={feedback.borderColor}

@@ -1,14 +1,21 @@
+
+//REACT---------->
 import { useState } from "react";
 
+
+//COMPONENTS---------->
 import HeroMain from "../components/HeroMain";
 import CardContact from "../components/Contact/CardContact";
 import Faq from "../components/Contact/Faq";
 import Formulary from "../components/Contact/formulary";
 import MapaSchool from "../components/MapSchool";
+
+//IMAGES
 import ImageAbout from "../assets/images/localimg.png";
 
+//LAYOUT---------->
 import HeroLayout from "../Layout/HeroLayout";
-//Data
+//DATA--------->
 import faqs from "../data/faqs";
 
 const Contact = () => {
@@ -21,12 +28,12 @@ const Contact = () => {
     <div className="w-full ">
       <div className="w-full relative bg-primary">
         <div className="w-full md:flex md:justify-center ">
-        <div className="absolute top-0 w-full h-full bg-[#000000a8] bg-gradient-to-r from-[#0A122B] via-[#0a122bbd] to-[#04132900] z-10"></div>
-      <img
-        src={ImageAbout}
-        alt=""
-        className="absolute w-full h-full top-0 object-cover"
-      />
+          <div className="absolute top-0 w-full h-full bg-linear-to-r bg-[#000000a8]  from-primary via-[#0a122bbd] to-[#04132900] z-10"></div>
+          <img
+            src={ImageAbout}
+            alt=""
+            className="absolute w-full h-full top-0 object-cover"
+          />
           <HeroLayout>
             <HeroMain
               className=""
@@ -50,14 +57,14 @@ const Contact = () => {
             <Formulary />
           </div>
 
-         <div className="w-full flex flex-col justify-between">
-         <div className="w-full">
-            <CardContact />
+          <div className="w-full flex flex-col justify-between">
+            <div className="w-full">
+              <CardContact />
+            </div>
+            <div className="border rounded-2xl">
+
+            </div>
           </div>
-          <div className="border rounded-2xl">
-            
-          </div>
-         </div>
         </div>
       </div>
 

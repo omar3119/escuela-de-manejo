@@ -1,19 +1,21 @@
-import { useContext } from "react";
-import { counterContext } from "../context/counterContext";
 
-//Datos
-import datosPlanes from "../data/datosPlanes";
 
+//COMPONENTS------->
 import Card from "../components/Courses/CardServices";
 import HeroMain from "../components/HeroMain";
+//IMAGES------->
 import imgHeroPlans from "./../assets/images/img-hero-plans.png";
-
+//LAYOUT------->
 import HeroLayot from "../Layout/HeroLayout";
+//DATA------->
+import datosPlanes from "../data/datosPlanes";
+
+
 function PricingPlans() {
-  console.log(datosPlanes);
-  const { counter } = useContext(counterContext);
   return (
     <div className="w-full md:flex md:flex-col md:items-center">
+
+      {/* //HERO----- */}
       <div className="w-full md:flex md:justify-center relative ">
         <div className="w-full h-full bg-[#000000a8] absolute z-50 bg-gradient-to-r from-[#01051a] via-[#041329ad] to-[#04132900]"></div>
         <img
@@ -21,28 +23,25 @@ function PricingPlans() {
           alt=""
           className="absolute w-full h-full top-0 object-cover"
         />
-
-
         <HeroLayot>
-            <div className="mb-4 relative z-50">
-              <span className="text-secondary text-xl font-semibold ">
-                Enciende tu confiaza
-              </span>
-            </div>
+          <div className="mb-4 relative z-50">
+            <span className="text-secondary text-xl font-semibold ">
+              Enciende tu confiaza
+            </span>
+          </div>
 
-            <HeroMain
-              title="Domina la vía. Empodera tu futuro."
-              description=" Elige entre nuestros planes de estudio premium diseñados para
+          <HeroMain
+            title="Domina la vía. Empodera tu futuro."
+            description=" Elige entre nuestros planes de estudio premium diseñados para
             transformar aprendices en conductores expertos a través del
             aprendizaje cinético y seguridad de nivel guardián."
-              colorTitle="text-[#FFFFFF]"
-              colorText="text-[#DBEAFE]"
-            />
+            colorTitle="text-[#FFFFFF]"
+            colorText="text-[#DBEAFE]"
+          />
         </HeroLayot>
-
-
       </div>
 
+      {/* PLANES O PRECING */}
       <div className="px-6 mt-12  lg:flex lg:justify-center">
         <div className="w-full md:max-w-130 lg:max-w-5xl lg:mt-0 lg:py-24">
           <div className="text-center py-8">
