@@ -61,7 +61,7 @@ function PricingPlans() {
                 description={plan.description}
                 price={plan.price}
                 datos={plan.features}
-                badgeColor={plan.color}
+                accent={plan.color}
                 borderColorr={
                   plan.id === 2
                     ? "border-primary lg:scale-105"
