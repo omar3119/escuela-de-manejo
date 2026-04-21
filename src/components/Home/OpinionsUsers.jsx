@@ -25,7 +25,7 @@ const OpinionsUsers = () => {
                 key={feedback.id}
                 name={feedback.name}
                 testimonial={feedback.opinion}
-                borderTestimonial={feedback.borderColor}
+                accent={feedback.accent}
               />
             ))}
           </div>
