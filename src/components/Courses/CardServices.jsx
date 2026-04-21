@@ -8,6 +8,7 @@ const Card = ({
   badgeColor,
   borderColorr,
   bgColorr,
+  accent
 }) => {
   return (
     <div
@@ -34,7 +35,9 @@ const Card = ({
             key={index}
             className="flex gap-2 items-center py-3 text-[16px] text-gray-700"
           >
-            <FaCircleCheck className={`w-5 h-5 text-${badgeColor}`} />
+            <FaCircleCheck className={`w-5 h-5`}
+            style={{color: accent}}
+            />
             {item}
           </li>
         ))}

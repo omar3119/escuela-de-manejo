@@ -10,7 +10,7 @@
       "Vehículo para el Examen Oficial",
       "Maestría en Maniobras Básicas"
     ],
-    "color": "greenn"
+    "color": "#049c32"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
       "Vehículo para el Examen Oficial",
       "Técnicas de Manejo Defensivo"
     ],
-    "color": "primary"
+    "color": "#0A122B"
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
       "Vehículo para el Examen Oficial",
       "Soporte hasta Aprobar el Examen"
     ],
-    "color": "secondary"
+    "color": "#FD761A"
 
   }
 ]
