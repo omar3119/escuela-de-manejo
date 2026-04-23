@@ -2,7 +2,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 
 const Benefits = ({title, description, icon}) => {
   return (
-    <div className="w-full p-6  bg-[#e2e4e6] rounded-lg md:flex md:justify-center lg:max-w-95.5">
+    <div className="w-full p-6  bg-[#f1f1f1] rounded-lg md:flex md:justify-center lg:max-w-95.5">
       <div className="md:max-w-130 ">
         <div className="inline-block bg-[#1e40af18] p-2 rounded-lg">
           {
