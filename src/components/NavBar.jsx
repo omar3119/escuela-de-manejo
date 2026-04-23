@@ -10,7 +10,7 @@ const Navbar = ({ toggleMenu }) => {
 
   const{counter} = useContext(counterContext);
   return (
-    <nav className="w-full relative bg-white px-6 py-4 z-50 lg:max-w-5xl">
+    <nav className="w-full relative bg-white px-6 py-3 z-50 lg:max-w-5xl">
       <div className="w-full h-full flex justify-between items-center ">
         <h2 className="text-primary font-bold text-xl">esKairos</h2>
         <IoMenu
