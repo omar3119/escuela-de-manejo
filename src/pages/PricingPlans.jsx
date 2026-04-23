@@ -62,14 +62,7 @@ function PricingPlans() {
                 price={plan.price}
                 datos={plan.features}
                 accent={plan.color}
-                borderColorr={
-                  plan.id === 2
-                    ? "border-primary lg:scale-105"
-                    : "border-transparent"
-                }
-                bgColorr={
-                  plan.id === 2 ? "bg-primary text-white" : "bg-[#E2E2E4]"
-                }
+
               />
             ))}
           </div>
