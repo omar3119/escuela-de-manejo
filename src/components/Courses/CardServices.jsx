@@ -12,7 +12,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className={`w-full flex flex-col justify-between bg-white rounded-lg shadow-lg p-6 relative border-t-4 ${borderColorr}`}
+      className={`w-full flex flex-col justify-between bg-white rounded-xl shadow-lg p-6 relative`}
     >
       {/* Badge */}
 
@@ -45,7 +45,7 @@ const Card = ({
 
       {/* CTA Button */}
       <button
-        className={`w-full  hover:bg-blue-700 hover:text-white ${bgColorr}  transition-colors  font-semibold py-3 rounded-lg text-sm tracking-wide cursor-pointer`}
+        className={`w-full bg-primary text-white  hover:bg-blue-700 hover:text-white ${bgColorr}  transition-colors  font-semibold py-3 rounded-lg text-sm tracking-wide cursor-pointer`}
       >
         Inscribirse Ahora
       </button>
