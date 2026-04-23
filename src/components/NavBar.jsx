@@ -15,7 +15,7 @@ const Navbar = ({ toggleMenu }) => {
         <h2 className="text-primary font-bold text-xl">esKairos</h2>
         <RiMenu2Line
           onClick={toggleMenu}
-          className="text-3xl cursor-pointer lg:hidden"
+          className="text-2xl cursor-pointer lg:hidden"
         />
         <div className="hidden lg:block">
           <NavMenu />
