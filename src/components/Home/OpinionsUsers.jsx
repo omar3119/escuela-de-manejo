@@ -1,4 +1,5 @@
 import CardOpinion from "./CardOpinion";
+import InfiniteSlider from "../../InfiniteSlider";
 
 import feedback from "../../data/feedback.json";
 const OpinionsUsers = () => {
@@ -20,14 +21,9 @@ const OpinionsUsers = () => {
             </div>
           </div>
           <div className="flex flex-col gap-5 lg:flex lg:flex-row">
-            {feedback.map((feedback) => (
-              <CardOpinion
-                key={feedback.id}
-                name={feedback.name}
-                testimonial={feedback.opinion}
-                accent={feedback.accent}
-              />
-            ))}
+          <InfiniteSlider/>
+
+            
           </div>
         </div>
       </div>
