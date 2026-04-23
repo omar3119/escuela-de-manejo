@@ -18,7 +18,7 @@ const HeroMain = ({
           {title}
           <span className={colorTitle2}>{title2}</span>
         </h1>
-        <p className={` leading-8  text-lg mt-6 ${colorText}`}>{description}</p>
+        <p className={` leading-8   mt-6 ${colorText}`}>{description}</p>
       </div>
 
 
