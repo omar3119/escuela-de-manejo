@@ -1,4 +1,7 @@
+
+//React
 import { useState, useRef } from "react";
+//ICON REACT-ICONS
 import { LuSend } from "react-icons/lu";
 import emailjs from "@emailjs/browser";
 
@@ -66,7 +69,7 @@ export default function MissionBriefing() {
     <div className="bg-white rounded-xl shadow-md py-10 px-5 w-full">
       {/* Title */}
       <div className="flex items-center gap-3 mb-8">
-        <span className="w-1 h-9 bg-orange-500 rounded-full block" />
+        <span className="w-1 h-9 bg-secondary rounded-full block" />
         <h2 className="text-3xl font-bold text-slate-800 tracking-tight">
           Mission Briefing
         </h2>
@@ -82,7 +85,7 @@ export default function MissionBriefing() {
               onChange={handleChange}
               placeholder="e.g. Julian Vane"
               className={`${inputStyle} ${
-                errors.from_name ? "ring-2 ring-orange-500" : ""
+                errors.from_name ? "ring-2 ring-red-600" : ""
               }`}
             />
           </Field>
@@ -94,7 +97,7 @@ export default function MissionBriefing() {
               onChange={handleChange}
               placeholder="julian@example.com"
               className={` ${inputStyle} ${
-                errors.from_email ? "ring-2 ring-orange-500" : ""
+                errors.from_email ? "ring-2 ring-red-600" : ""
               }`}
             />
           </Field>

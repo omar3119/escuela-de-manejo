@@ -71,7 +71,7 @@ const Contact = () => {
       </div>
 
       <section className=" w-full px-6 bg-[#F2F4F6]  lg:flex lg:justify-center">
-        <div className="w-full lg:max-w-5xl">
+        <div className="w-full lg:max-w-5xl pb-10">
           <h2 className="text-4xl font-bold text-primary mb-14 pt-24 text-center">
             Preguntas Frecuentes
           </h2>
