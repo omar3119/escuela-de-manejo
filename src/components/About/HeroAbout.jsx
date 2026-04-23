@@ -6,7 +6,7 @@ import HeroMain from "../HeroMain";
 const HeroAbout = () => {
   return (
     <HeroLayout>
-      <div className="inline-block bg-[#DDE1FF] text-secondary font-semibold px-3 py-1 rounded-full mb-4">
+      <div className="inline-block bg-[#DDE1FF] text-[#b22e2e] font-semibold px-3 py-1 rounded-full mb-4">
         <span>Nuestra Misión</span>
       </div>
 
