@@ -1,6 +1,7 @@
 import Hero from "../components/Home/Hero";
 import Benefits from "../components/Home/Benefits";
 import OpinionsUsers from "../components/Home/OpinionsUsers";
+import InfiniteSlider from "../InfiniteSlider";
 import { FaCalendarAlt, FaShieldAlt, FaCarSide } from "react-icons/fa";
 
 
@@ -42,7 +43,9 @@ function Home() {
         </div>
       </div>
       <div className="w-full ">
+
         <OpinionsUsers />
+        
       </div>
     </div>
   );
