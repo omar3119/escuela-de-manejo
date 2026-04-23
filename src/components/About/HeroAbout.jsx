@@ -6,7 +6,7 @@ import HeroMain from "../HeroMain";
 const HeroAbout = () => {
   return (
     <HeroLayout>
-      <div className="inline-block bg-[#DDE1FF] text-primary font-semibold px-3 py-1 rounded-full mb-4">
+      <div className="inline-block bg-[#DDE1FF] text-secondary font-semibold px-3 py-1 rounded-full mb-4">
         <span>Nuestra Misión</span>
       </div>
 
@@ -16,14 +16,14 @@ const HeroAbout = () => {
           description="No solo te enseñamos a aprobar un examen; cultivamos los instintos de
           un guardián cinético. Nuestra década de excelencia se basa en la
           precisión, la paciencia y la filosofía de una conciencia vial total."
-          colorTitle="text-[#00288E]"
-          colorTitle2="text-[#FD761A]"
+          colorTitle="text-primary"
+          colorTitle2="text-secondary"
           colorText="text-[#444653]"
           textAlign="text-left"
         />
 
         <figure className="w-full mt-10 relative flex justify-center md:w-8/10 lg:w-300 ">
-          <div className=" w-full h-full absolute -rotate-3 bg-blue-600 rounded-4xl" />
+          <div className=" w-full h-full absolute -rotate-3 bg-primary rounded-4xl" />
           <img
             className="w-full  h-full rounded-4xl rotate-3 object-cover "
             src={ImageAbout}
