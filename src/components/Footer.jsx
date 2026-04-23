@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#F1F5F9]  flex flex-col  lg:items-center">
       <div className="w-full px-6 py-4 lg:max-w-5xl">
-        <h4 className="text-xl font-bold text-[#1E3A8A] pt-10">
+        <h4 className="text-xl font-bold text-primary pt-10">
           The Kinetic Guardian{" "}
         </h4>
         <p className="text-[#64748B] mt-2 text-[14px]">
