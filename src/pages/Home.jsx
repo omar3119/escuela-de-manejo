@@ -19,7 +19,7 @@ function Home() {
           <div className="md:max-w-130 md:mx-auto lg:py-24 lg:lg:max-w-5xl">
             <div className="max-w-150 mx-auto text-center">
               <h2 className="text-3xl font-extrabold text-primary pb-5 text-center lg:text-4xl lg:leading-15">
-                Formamos Conductores y Construimos Confianza
+                Beneficios
               </h2>
               <p className="text-lg text-[#444653]">
                 Hemos rediseñado la experiencia de la escuela de manejo como un
