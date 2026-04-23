@@ -70,8 +70,8 @@ export default function MissionBriefing() {
       {/* Title */}
       <div className="flex items-center gap-3 mb-8">
         <span className="w-1 h-9 bg-secondary rounded-full block" />
-        <h2 className="text-3xl font-bold text-slate-800 tracking-tight">
-          Mission Briefing
+        <h2 className="text-2xl font-bold text-slate-800 tracking-tight">
+        Solicitud de Información
         </h2>
       </div>
 
