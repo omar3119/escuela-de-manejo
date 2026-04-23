@@ -11,7 +11,7 @@ const NavMenu = ({ isClose }) => {
 
   return (
     <nav className="w-full fixed right-0 h-screen  bg-white z-10 lg:static lg:h-auto lg:bg-transparent">
-      <ul className="flex flex-col gap-6 mt-10 px-6 text-lg font-semibold lg:flex-row lg:mt-0">
+      <ul className="flex flex-col gap-6 mt-10 font-semibold px-6 text-lg lg:flex-row lg:mt-0">
         {menuItems.map((item, index) => (
           <li key={index} className="">
             <NavLink
@@ -20,8 +20,8 @@ const NavMenu = ({ isClose }) => {
               
               className={({ isActive }) =>
                 isActive
-                  ? " border-l-4 px-2 py-1 border-primary text-primary lg:font-extrabold lg:border-b-2 lg:border-l-0"
-                  : "border-l-4 px-2  border-transparent"
+                  ? " border-l-4 px-2 border-primary text-primary lg:border-b lg:border-l-0"
+                  : "border-l-4   border-transparent"
               }
             >
               {item.name}

@@ -16,7 +16,7 @@ const Hero = () => {
         className="absolute w-full h-full top-0 object-cover"
       />
       <HeroLayout>
-        <div className="w-full px-6 flex flex-col">
+        <div className="w-full flex flex-col">
           <HeroMain
             title="Aprende a conducir con"
             title2=" confianza"
