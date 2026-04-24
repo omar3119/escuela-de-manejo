@@ -9,11 +9,11 @@ function InfiniteSlider() {
 
       {/* Difuminado izquierda */}
       <div className="absolute left-0 top-0 h-full w-28 z-10 pointer-events-none
-                      bg-linear-to-r md:from-primary  to-transparent" />
+                      bg-linear-to-r md:from-primary md:via-[#0a122b33] to-transparent" />
 
       {/* Difuminado derecha ✅ */}
       <div className="absolute right-0 top-0 h-full w-28 z-10 pointer-events-none
-                      bg-linear-to-l md:from-primary  to-transparent" />
+                      bg-linear-to-l md:from-primary md:via-[#0a122b33] to-transparent" />
 
       {/* Track animado ✅ */}
       <div
@@ -21,6 +21,7 @@ function InfiniteSlider() {
         style={{ animation: "slide 25s linear infinite" }}
         onMouseEnter={e => e.currentTarget.style.animationPlayState = "paused"}
         onMouseLeave={e => e.currentTarget.style.animationPlayState = "running"}
+  
       >
         {doubled.map((item,i) => (
           <CardOpinion

@@ -5,10 +5,10 @@ import feedback from "../../data/feedback.json";
 const OpinionsUsers = () => {
   return (
     <div className="w-full  bg-primary lg:flex lg:justify-center">
-      <div className=" py-18 lg:py-24 lg:max-w-5xl">
+      <div className=" py-18 lg:py-24 lg:max-w-6xl ">
         <div className="">
           <div className="w-full flex justify-center">
-            <div className="pb-8 max-w-md mx-auto text-center lg:max-w-3xl">
+            <div className="px-6 pb-8 max-w-md mx-auto text-center lg:max-w-3xl">
               <h2 className="text-white text-2xl font-bold lg:text-4xl pb-6">
                 Opiniones de nuestros usuarios
               </h2>
