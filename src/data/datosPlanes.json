@@ -1,42 +1,77 @@
 [
-  {
-    "id": 1,
-    "title": "Basico",
-    "price": "$150",
-    "description": "Ideal para principiantes que quieren aprender lo esencial del manejo.",
-    "features": [
-      "5 Horas de Instrucción",
-      "Examen de Práctica Simulado",
-      "Vehículo para el Examen Oficial",
-      "Maestría en Maniobras Básicas"
-    ],
-    "color": "#049c32"
-  },
-  {
-    "id": 2,
-    "title": "Intermedio",
-    "price": "$180",
-    "description": "Para quienes ya tienen nociones básicas y quieren ganar más confianza al volante.",
-    "features": [
-      "10 Horas de Instrucción",
-      "Clases en Autopista y Ciudad",
-      "Vehículo para el Examen Oficial",
-      "Técnicas de Manejo Defensivo"
-    ],
-    "color": "#0A122B"
-  },
-  {
-    "id": 3,
-    "title": "Curso Completo",
-    "price": "$220",
-    "description": "La experiencia completa para dominar el manejo en cualquier situación y aprobar el examen.",
-    "features": [
-      "20 Horas de Instrucción",
-      "Clases Nocturnas y en Lluvia",
-      "Vehículo para el Examen Oficial",
-      "Soporte hasta Aprobar el Examen"
-    ],
-    "color": "#FD761A"
-
-  }
+  [
+    {
+      "id": 1,
+      "management": "Auto",
+      "title": "Basico",
+      "price": "$150",
+      "description": "Ideal para principiantes que quieren aprender lo esencial del manejo.",
+      "features": [
+        "5 Horas de Instrucción",
+        "Examen de Práctica Simulado",
+        "Vehículo para el Examen Oficial",
+        "Maestría en Maniobras Básicas"
+      ],
+      "color": "#049c32"
+    },
+    {
+      "id": 2,
+      "management": "Auto",
+      "title": "Intermedio",
+      "price": "$180",
+      "description": "Para quienes ya tienen nociones básicas y quieren ganar más confianza al volante.",
+      "features": [
+        "10 Horas de Instrucción",
+        "Clases en Autopista y Ciudad",
+        "Vehículo para el Examen Oficial",
+        "Técnicas de Manejo Defensivo"
+      ],
+      "color": "#0A122B"
+    },
+    {
+      "id": 3,
+      "management": "Auto",
+      "title": "Curso Completo",
+      "price": "$220",
+      "description": "La experiencia completa para dominar el manejo en cualquier situación y aprobar el examen.",
+      "features": [
+        "20 Horas de Instrucción",
+        "Clases Nocturnas y en Lluvia",
+        "Vehículo para el Examen Oficial",
+        "Soporte hasta Aprobar el Examen"
+      ],
+      "color": "#FD761A"
+    }
+  ],
+  
+  [
+    {
+      "id": 4,
+      "management": "Moto",
+      "title": "Básico Moto",
+      "price": "$120",
+      "description": "Ideal para principiantes que quieren aprender a manejar moto desde cero.",
+      "features": [
+        "5 Horas de Instrucción",
+        "Equilibrio y Control Básico",
+        "Moto para el Examen Oficial",
+        "Maniobras Esenciales de Seguridad"
+      ],
+      "color": "#049c32"
+    },
+    {
+      "id": 5,
+      "management": "Moto",
+      "title": "Intermedio Moto",
+      "price": "$150",
+      "description": "Para quienes ya tienen nociones básicas y quieren ganar confianza en la vía.",
+      "features": [
+        "10 Horas de Instrucción",
+        "Manejo en Ciudad y Autopista",
+        "Moto para el Examen Oficial",
+        "Técnicas de Frenado y Curvas"
+      ],
+      "color": "#0A122B"
+    }
+  ]
 ]
