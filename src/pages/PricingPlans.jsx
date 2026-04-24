@@ -53,10 +53,8 @@ function PricingPlans() {
           </div>
 
           <HeroMain
-            title="Domina la vía. Empodera tu futuro."
-            description=" Elige entre nuestros planes de estudio premium diseñados para
-            transformar aprendices en conductores expertos a través del
-            aprendizaje cinético y seguridad de nivel guardián."
+            title="Servicios de manejo para cada tipo de conductor"
+            description="Ofrecemos clases para auto, moto, ampliación de licencia y refuerzo de manejo. Elige el servicio que necesitas y comienza a conducir con seguridad y confianza.."
             colorTitle="text-[#FFFFFF]"
             colorText="text-[#DBEAFE]"
           />
