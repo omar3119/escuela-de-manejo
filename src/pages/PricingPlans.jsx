@@ -1,3 +1,4 @@
+import { useState } from "react";
 //COMPONENTS------->
 import Card from "../components/Courses/CardServices";
 import HeroMain from "../components/HeroMain";
@@ -11,21 +12,30 @@ import datosPlanes from "../data/datosPlanes";
 import { FaCar } from "react-icons/fa";
 import { FaMotorcycle } from "react-icons/fa6";
 
+
+const [planesAuto, planesMoto] = datosPlanes;
+
+
 function PricingPlans() {
   const plans = [
     {
       id: 1,
       management: "Auto",
-      u: "/auto",
       icon: <FaCar />,
     },
     {
       id: 2,
       management: "Moto",
-      u: "/moto",
       icon: <FaMotorcycle />,
     },
   ];
+
+
+  const [selected, setSelected] = useState(planesAuto[0]);
+  console.log(planesMoto[0])
+
+  
+
   return (
     <div className="w-full md:flex md:flex-col md:items-center">
       {/* //HERO----- */}
@@ -70,9 +80,17 @@ function PricingPlans() {
             <div className="w-full flex justify-center pb-10">
               <div className="bg-shadow-black shadow-2xl inline-flex px-4 py-2 justify-center gap-2  rounded-lg">
                 {plans.map((item, i) => (
-                  <div className="">
-                    <button className="flex items-center gap-2 py-2  bg-primary text-white rounded-lg px-4 cursor-pointer" key={i}>
-                    {item.icon}
+                  <div key={item.id} className="">
+                    <button
+                      onClick={() => setSelected(item)}
+                      className={`flex items-center gap-2 py-2 text-black rounded-lg px-4 cursor-pointer ${
+                        selected.management === item.management
+                          ? "bg-secondary text-white"
+                          : ""
+                      }`}
+                      key={i}
+                    >
+                      {item.icon}
 
                       {item.management}
                     </button>
@@ -81,16 +99,16 @@ function PricingPlans() {
               </div>
             </div>
             <div className="w-full flex flex-col gap-6 lg:w-full lg:flex-row">
-              {datosPlanes.map((plan) => (
-                <Card
-                  key={plan.id}
-                  title={plan.title}
-                  description={plan.description}
-                  price={plan.price}
-                  datos={plan.features}
-                  accent={plan.color}
-                />
-              ))}
+            {(selected.management === "Auto" ? planesAuto : planesMoto).map((plan) => (
+              <Card
+                key={plan.id}
+                title={plan.title}
+                description={plan.description}
+                price={plan.price}
+                datos={plan.features}
+                accent={plan.color}
+              />
+            ))}
             </div>
           </div>
         </div>
