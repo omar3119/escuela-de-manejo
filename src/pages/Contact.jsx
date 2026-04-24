@@ -30,7 +30,7 @@ const Contact = () => {
     <div className="w-full ">
       <div className="w-full relative bg-primary">
         <div className="w-full md:flex md:justify-center ">
-          <div className="absolute top-0 w-full h-full bg-linear-to-r bg-[#000000a8]  from-primary via-[#0a122bbd] to-[#04132900] z-10"></div>
+          <div className="absolute top-0 w-full h-full bg-linear-to-r bg-[#000000b6]   z-10"></div>
           <img
             src={ImageAbout}
             alt=""
@@ -47,8 +47,8 @@ const Contact = () => {
   instructores expertos están listos
   para guiarte hacia la maestría
   automotriz."
-              colorTitle="text-white"
-              colorText="text-[#DBEAFE]"
+              colorTitle="text-white text-shadow-lg text-shadow-primary"
+              colorText="text-[#DBEAFE] text-shadow-lg text-shadow-primary"
             />
           </HeroLayout>
         </div>
