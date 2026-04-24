@@ -9,11 +9,11 @@ function InfiniteSlider() {
 
       {/* Difuminado izquierda */}
       <div className="absolute left-0 top-0 h-full w-28 z-10 pointer-events-none
-                      bg-linear-to-r from-primary via-[#0a122b94 to-transparent" />
+                      bg-linear-to-r from-primary  to-transparent" />
 
       {/* Difuminado derecha ✅ */}
       <div className="absolute right-0 top-0 h-full w-28 z-10 pointer-events-none
-                      bg-linear-to-l from-primary via-[#0a122b94] to-transparent" />
+                      bg-linear-to-l from-primary  to-transparent" />
 
       {/* Track animado ✅ */}
       <div
