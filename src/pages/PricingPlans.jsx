@@ -31,8 +31,7 @@ function PricingPlans() {
   ];
 
 
-  const [selected, setSelected] = useState(planesAuto[0]);
-  console.log(planesMoto[0])
+  const [selected, setSelected] = useState("Auto");
 
   
 
@@ -82,9 +81,9 @@ function PricingPlans() {
                 {plans.map((item, i) => (
                   <div key={item.id} className="">
                     <button
-                      onClick={() => setSelected(item)}
+                      onClick={() => setSelected(item.management)}
                       className={`flex items-center gap-2 py-2 text-black rounded-lg px-4 cursor-pointer ${
-                        selected.management === item.management
+                        selected === item.management
                           ? "bg-secondary text-white"
                           : ""
                       }`}
@@ -99,7 +98,7 @@ function PricingPlans() {
               </div>
             </div>
             <div className="w-full flex flex-col gap-6 lg:w-full lg:flex-row">
-            {(selected.management === "Auto" ? planesAuto : planesMoto).map((plan) => (
+            {(selected === "Auto" ? planesAuto : planesMoto).map((plan) => (
               <Card
                 key={plan.id}
                 title={plan.title}
