@@ -20,7 +20,7 @@ const NavMenu = ({ isClose }) => {
               
               className={({ isActive }) =>
                 isActive
-                  ? " border-l-4 px-2 border-primary text-primary lg:border-b lg:border-l-0"
+                  ? "border-secondary border-l-4 px-2 lg:py-2 lg:bg-secondary lg:text-white lg:border-b lg:border-l-0 lg:rounded-lg"
                   : "border-l-4   border-transparent"
               }
             >

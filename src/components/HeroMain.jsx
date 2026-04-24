@@ -10,7 +10,7 @@ const HeroMain = ({
   textAlign = "text-center",
 }) => {
   return (
-    <div className="max-w-150 w-full relative z-60 mx-auto">
+    <div className="max-w-180 w-full relative z-60 mx-auto">
       <div className={`w-full ${textAlign}`}>
         <h1
           className={`text-5xl font-bold leading-14 ${colorTitle}  lg:text-7xl lg:leading-20`}
