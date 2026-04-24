@@ -5,7 +5,7 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 const CardOpinion = ({ name, testimonial, accent }) => {
   return (
     <div
-      className="bg-[#1A2445] rounded-lg p-8 mt-5 border-l-2 relative flex flex-col lg:justify-between max-w-md mx-auto lg:max-w-95.5"
+      className="bg-[#1A2445] rounded-lg p-8 mt-5 border-l-2 relative flex flex-col lg:justify-between max-w-82 mx-auto lg:max-w-95.5"
       style={{ borderLeftColor: accent }}
     >
       <span

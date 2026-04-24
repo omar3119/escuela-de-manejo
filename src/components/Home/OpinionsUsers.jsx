@@ -4,7 +4,7 @@ import InfiniteSlider from "../../InfiniteSlider";
 import feedback from "../../data/feedback.json";
 const OpinionsUsers = () => {
   return (
-    <div className="w-full bg-primary lg:flex lg:justify-center">
+    <div className="w-full  bg-primary lg:flex lg:justify-center">
       <div className="px-6 py-18 lg:py-24 lg:max-w-5xl">
         <div className="">
           <div className="w-full flex justify-center">
