@@ -8,6 +8,7 @@ import StateCompo from "./context/StateCompo";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
+import BtnWhatsapp from "./components/BtnWhatsapp";
 
 //IMPORT PAGES
 import Home from "./pages/Home"
@@ -41,6 +42,8 @@ function App() {
   useScrollToTop();
   return (
     <StateCompo>
+      <BtnWhatsapp/>
+
     <div className="w-full flex flex-col items-center bg-[#F7F9FB] font-display">
       <header className="w-full bg-white  border-b-2  border-[#e8ecf0] flex justify-center">
         <Navbar toggleMenu={toggleMenu} />
