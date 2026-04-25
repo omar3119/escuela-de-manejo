@@ -42,9 +42,9 @@ function App() {
   useScrollToTop();
   return (
     <StateCompo>
-      <BtnWhatsapp/>
 
     <div className="w-full flex flex-col items-center bg-[#F7F9FB] font-display">
+      <BtnWhatsapp/>
       <header className="w-full bg-white  border-b-2  border-[#e8ecf0] flex justify-center">
         <Navbar toggleMenu={toggleMenu} />
       </header>

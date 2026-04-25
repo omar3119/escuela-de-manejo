@@ -5,7 +5,7 @@ const doubled = [...feedback, ...feedback];
 
 function InfiniteSlider() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="w-full relative overflow-hidden">
 
       {/* Difuminado izquierda */}
       <div className="absolute left-0 top-0 h-full w-28 z-10 pointer-events-none
