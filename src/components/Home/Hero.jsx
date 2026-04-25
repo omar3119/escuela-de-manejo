@@ -8,7 +8,7 @@ import HeroLayout from "../../Layout/HeroLayout";
 
 const Hero = () => {
   return (
-    <section className="w-full relative  text-white md:flex md:items-center md:justify-center ">
+    <section className="w-full relative  text-white md:flex md:items-center md:justify-center">
       <div className="absolute top-0 w-full h-full bg-[#000000a8] bg-linear-to-r from-primary via-[#0a122bbd] to-[#04132900] z-10"></div>
       <img
         src={mainHero}

@@ -20,7 +20,7 @@ const OpinionsUsers = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-5 lg:flex lg:flex-row">
+          <div className="w-full flex flex-col gap-5 lg:flex lg:flex-row">
           <InfiniteSlider/>
 
             

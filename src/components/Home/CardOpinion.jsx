@@ -1,11 +1,11 @@
 import { RiDoubleQuotesL } from "react-icons/ri";
 //Home
-
+import { FaUser } from "react-icons/fa6";
 
 const CardOpinion = ({ name, testimonial, accent }) => {
   return (
     <div
-      className="bg-[#1A2445] rounded-lg p-8 mt-5 border-l-2 relative flex flex-col lg:justify-between max-w-82 mx-auto lg:max-w-95.5"
+      className="bg-[#1A2445] rounded-lg p-8 mt-5 border-l-2 relative flex flex-col justify-between max-w-82 mx-auto lg:max-w-95.5"
       style={{ borderLeftColor: accent }}
     >
       <span
@@ -20,8 +20,8 @@ const CardOpinion = ({ name, testimonial, accent }) => {
       </p>
 
       <div className="flex items-center gap-3">
-      <div className="w-12 h-12 rounded-full bg-blue-500 overflow-hidden">
-          <img src="img.jpg" alt="img" className="w-full h-full object-cover" />
+      <div className="w-12 h-12 flex justify-center items-center rounded-full bg-blue-500 overflow-hidden">
+        <FaUser className="text-white"/>
         </div>
         <div>
           <p className="text-white font-bold text-sm">{name}</p>
