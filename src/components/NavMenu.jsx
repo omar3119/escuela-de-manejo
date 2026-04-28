@@ -7,6 +7,9 @@ const NavMenu = ({ isClose }) => {
     { name: "Planes", link: "/planes" },
     { name: "Sobre Nosotros", link: "/sobre-nosotros" },
     { name: "Contacto", link: "/contacto" },
+    { name: "Login", link: "/admin/login" },
+    { name: "Mis clases", link: "/portal" },
+
   ];
 
   return (

@@ -15,6 +15,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@react-google-maps/api": "^2.20.8",
+    "@supabase/supabase-js": "^2.105.0",
     "@tailwindcss/vite": "^4.2.2",
     "gh-pages": "^6.3.0",
     "react": "^19.2.4",

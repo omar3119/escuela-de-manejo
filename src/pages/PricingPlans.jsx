@@ -3,7 +3,7 @@ import { useState } from "react";
 import Card from "../components/Courses/CardServices";
 import HeroMain from "../components/HeroMain";
 //IMAGES------->
-import imgHeroPlans from "./../assets/images/img-hero-plans.png";
+import imgHeroPlans from "../assets/images/img-hero-plans.png";
 //LAYOUT------->
 import HeroLayot from "../Layout/HeroLayout";
 //DATA------->
