@@ -56,7 +56,7 @@ export default function Portal() {
         />
         <button
           onClick={handleAccess}
-          className="w-full rounded-xl bg-blue-700 py-3 font-semibold text-white transition hover:bg-blue-800"
+          className="w-full cursor-pointer rounded-xl bg-blue-700 py-3 font-semibold text-white transition hover:bg-blue-800"
         >
           Ver mis clases
         </button>
