@@ -13,6 +13,7 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import BtnWhatsapp from "./components/BtnWhatsapp";
+import Header from "./components/Header";
 
 //IMPORT PAGES
 import Home from "./pages/Home";
@@ -49,9 +50,10 @@ function PublicLayout({ children }) {
   return (
     <div className="w-full flex flex-col items-center bg-[#F7F9FB] font-display">
       <BtnWhatsapp />
-      <header className="w-full bg-white border-b-2 border-[#e8ecf0] flex justify-center">
-        <Navbar toggleMenu={toggleMenu} />
-      </header>
+      
+      <Header>
+        <Navbar/>
+      </Header>
       <div className="w-full h-auto">
         <main className="relative z-5">
           <Menu isOpen={isOpen} isClose={closeMenu} />

@@ -3,6 +3,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import CardDate from "../../components/Portal/CardDate";
 import ClaseCard from "../../components/Portal/ClaseCard";
+
+import HeaderClass from "../../components/Portal/HeaderClass";
+import Header from "../../components/Header";
 const DAY_LABELS = ["DOM", "LUN", "MAR", "MIÉ", "JUE", "VIE", "SÁB"];
 
 /** Monday 00:00 of the week containing `date` */
@@ -128,6 +131,7 @@ export default function MisClases() {
   }, []);
   return (
     <div className="min-h-screen bg-slate-100/90 font-display pb-10">
+      <Header/>
       <div className="max-w-lg mx-auto px-4 pt-8">
         <div className="flex items-start justify-between gap-3 mb-6">
           <div>

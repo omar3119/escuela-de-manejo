@@ -40,16 +40,24 @@ export default function Portal() {
 
         {error && <p className="mb-4 rounded-md bg-red-50 px-3 py-2 text-sm text-red-600">{error}</p>}
 
+        <label htmlFor="portal-email" className="mb-2 block text-sm font-medium text-slate-700">
+          Correo electrónico
+        </label>
         <input
+          id="portal-email"
           type="email"
-          placeholder="e.g. alex.smith@academy.edu"
+          placeholder="smith@gmail.com"
           className="mb-3 w-full rounded-xl border border-gray-300 bg-gray-100 px-4 py-3 text-slate-700 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none"
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
+        <label htmlFor="portal-cedula" className="mb-2 block text-sm font-medium text-slate-700">
+          Cédula
+        </label>
         <input
+          id="portal-cedula"
           type="text"
-          placeholder="Cédula (ej: 8-123-456)"
+          placeholder="8-123-456"
           className="mb-5 w-full rounded-xl border border-gray-300 bg-gray-100 px-4 py-3 text-slate-700 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none"
           value={cedula}
           onChange={e => setCedula(e.target.value)}
