@@ -25,7 +25,7 @@ const HeroMain = ({
       },
       {
         threshold: 0.3,
-      }
+      },
     );
 
     observer.observe(element);
@@ -39,7 +39,9 @@ const HeroMain = ({
         <h1
           ref={titleRef}
           className={`text-5xl font-bold leading-14 ${colorTitle} lg:text-7xl lg:leading-20 transition-all duration-700 ease-out ${
-            isTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            isTitleVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-6"
           }`}
         >
           {title}
@@ -47,14 +49,14 @@ const HeroMain = ({
         </h1>
         <p
           className={`leading-8 text-lg mt-6 ${colorText} transition-all duration-700 delay-150 ease-out ${
-            isTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            isTitleVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-6"
           }`}
         >
           {description}
         </p>
       </div>
-
-
     </div>
   );
 };

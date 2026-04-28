@@ -50,9 +50,9 @@ function PublicLayout({ children }) {
   return (
     <div className="w-full flex flex-col items-center bg-[#F7F9FB] font-display">
       <BtnWhatsapp />
-      
+
       <Header>
-        <Navbar/>
+        <Navbar toggleMenu={toggleMenu} />
       </Header>
       <div className="w-full h-auto">
         <main className="relative z-5">

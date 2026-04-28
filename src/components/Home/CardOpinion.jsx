@@ -15,13 +15,11 @@ const CardOpinion = ({ name, testimonial, accent }) => {
         <RiDoubleQuotesL />
       </span>
 
-      <p className="text-[#E0E4FF] leading-relaxed mb-8">
-        {testimonial}
-      </p>
+      <p className="text-[#E0E4FF] leading-relaxed mb-8">{testimonial}</p>
 
       <div className="flex items-center gap-3">
-      <div className="w-12 h-12 flex justify-center items-center rounded-full bg-blue-500 overflow-hidden">
-        <FaUser className="text-white"/>
+        <div className="w-12 h-12 flex justify-center items-center rounded-full bg-blue-500 overflow-hidden">
+          <FaUser className="text-white" />
         </div>
         <div>
           <p className="text-white font-bold text-sm">{name}</p>

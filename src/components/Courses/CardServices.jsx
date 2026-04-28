@@ -1,15 +1,6 @@
 import { FaCircleCheck } from "react-icons/fa6";
 
-const Card = ({
-  title,
-  description,
-  price,
-  datos,
-  badgeColor,
-  borderColorr,
-  bgColorr,
-  accent
-}) => {
+const Card = ({ title, description, price, datos, bgColorr, accent }) => {
   return (
     <div
       className={`w-full flex flex-col justify-between bg-white rounded-xl shadow-lg p-6 relative`}
@@ -35,9 +26,7 @@ const Card = ({
             key={index}
             className="flex gap-2 items-center py-3 text-[16px] text-gray-700"
           >
-            <FaCircleCheck className={`w-5 h-5`}
-            style={{color: accent}}
-            />
+            <FaCircleCheck className={`w-5 h-5`} style={{ color: accent }} />
             {item}
           </li>
         ))}

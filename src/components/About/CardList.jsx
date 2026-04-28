@@ -23,7 +23,10 @@ const CardList = () => {
   return (
     <>
       {cardsData.map((card, index) => (
-        <div key={index} className="w-full max-w-130 overflow-hidden rounded-xl">
+        <div
+          key={index}
+          className="w-full max-w-130 overflow-hidden rounded-xl"
+        >
           <figure className="w-full">
             <img
               className="block w-full rounded-t-xl object-cover"

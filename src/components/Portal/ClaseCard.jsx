@@ -1,11 +1,9 @@
-
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { MdOutlinePlace } from "react-icons/md";
-const ClaseCard = ({c,accent}) => {
+const ClaseCard = ({ c, accent }) => {
   return (
     <li
-
       className={`bg-white rounded-xl border border-gray-100/80 shadow-sm pl-0 overflow-hidden border-l-[5px] ${accent.bar}`}
     >
       <div className="px-4 py-3">
@@ -36,6 +34,5 @@ const ClaseCard = ({c,accent}) => {
     </li>
   );
 };
-
 
 export default ClaseCard;

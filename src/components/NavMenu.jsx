@@ -9,7 +9,6 @@ const NavMenu = ({ isClose }) => {
     { name: "Contacto", link: "/contacto" },
     { name: "Login", link: "/admin/login" },
     { name: "Mis clases", link: "/portal" },
-
   ];
 
   return (
@@ -20,7 +19,6 @@ const NavMenu = ({ isClose }) => {
             <NavLink
               to={item.link}
               onClick={isClose}
-              
               className={({ isActive }) =>
                 isActive
                   ? "border-secondary border-l-4 px-2 lg:py-2 lg:bg-secondary lg:text-white lg:border-b lg:border-l-0 lg:rounded-lg"

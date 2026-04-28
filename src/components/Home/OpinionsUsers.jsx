@@ -1,7 +1,5 @@
-import CardOpinion from "./CardOpinion";
 import InfiniteSlider from "../../InfiniteSlider";
 
-import feedback from "../../data/feedback.json";
 const OpinionsUsers = () => {
   return (
     <div className="w-full  bg-primary lg:flex lg:justify-center">
@@ -21,9 +19,7 @@ const OpinionsUsers = () => {
             </div>
           </div>
           <div className="w-full flex flex-col gap-5 lg:flex lg:flex-row">
-          <InfiniteSlider/>
-
-            
+            <InfiniteSlider />
           </div>
         </div>
       </div>

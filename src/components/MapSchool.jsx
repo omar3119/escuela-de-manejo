@@ -1,10 +1,10 @@
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 const CENTER = { lat: 8.9936, lng: -79.5197 }; // Panamá City
 
 const containerStyle = {
-  width: '100%',
-  height: '100%',
+  width: "100%",
+  height: "100%",
 };
 
 export default function MapaEscuela() {
