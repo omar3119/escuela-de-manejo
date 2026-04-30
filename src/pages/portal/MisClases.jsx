@@ -1,10 +1,14 @@
+//DB
+import { supabase } from "../../supabaseClient";
+//REACT AND REACT ROUTER
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+//COMPONENTS
 import Header from "../../components/Header";
 import ClaseCard from "../../components/Portal/ClaseCard";
 import CardDate from "../../components/Portal/CardDate";
-import { supabase } from "../../supabaseClient";
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { HiOutlineCalendar } from "react-icons/hi2";
+//ICONS
+import { FcCalendar } from "react-icons/fc";
 
 function MisClases() {
   const weekDay = [
@@ -70,22 +74,17 @@ function MisClases() {
       <Header />
       <div className="w-full max-w-lg lg:max-w-5xl px-4 pt-8">
         <div className="flex items-center gap-3">
-          <HiOutlineCalendar
-            className="h-8 w-8 shrink-0 text-gray-900"
+          <FcCalendar
+            className="h-8 w-8 shrink-0 "
             aria-hidden
           />
-          <h1 className="text-2xl font-bold text-gray-900">Weekly Schedule</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Dias y horas de clases</h1>
         </div>
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-sm text-gray-500 pt-4 pb-6">
           October 21 – October 27, 2024
         </p>
-        <div className="flex items-center justify-between border border-gray-200 rounded-xl px-4 py-3 mt-4 mb-6">
-          <button className="text-gray-600 font-bold cursor-pointer">‹</button>
-          <span className="text-sm font-semibold">This Week</span>
-          <button className="text-gray-600 font-bold cursor-pointer">›</button>
-        </div>
         <div
-          className={`grid w-full grid-cols-1 gap-4 ${
+          className={`grid w-full grid-cols-1 gap-6 ${
             dataClass.length >= 3
               ? "lg:grid-cols-3"
               : dataClass.length === 2
