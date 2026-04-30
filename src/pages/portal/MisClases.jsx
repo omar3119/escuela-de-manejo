@@ -78,7 +78,7 @@ function MisClases() {
             className="h-8 w-8 shrink-0 "
             aria-hidden
           />
-          <h1 className="text-3xl font-bold text-gray-900">Dias y horas de clases</h1>
+          <h1 className="text-xl lg:text-3xl font-bold text-gray-900">Dias y horas de clases</h1>
         </div>
         <p className="text-sm text-gray-500 pt-4 pb-6">
           October 21 – October 27, 2024
