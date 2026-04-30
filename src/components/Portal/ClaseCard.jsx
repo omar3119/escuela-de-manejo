@@ -1,14 +1,25 @@
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import { HiOutlineVideoCamera } from "react-icons/hi";
-import { MdOutlinePlace } from "react-icons/md";
-const ClaseCard = ({start,end, description}) => {
-  
+const ClaseCard = ({ start, end, description, num_class }) => {
+  const borderStyles = [
+    "border-l-blue-600 text-blue-800",
+    "border-l-emerald-600 text-emerald-800",
+    "border-l-violet-600 text-violet-800",
+    "border-l-amber-600 text-amber-800",
+    "border-l-rose-600 text-rose-800",
+  ];
+  const styleIndex = Number(num_class)
+    ? (Number(num_class) - 1) % borderStyles.length
+    : 0;
+  const cardStyle = borderStyles[styleIndex];
 
   return (
-    <div className="bg-white border-l-4 border-l-blue-500 rounded-lg px-4 py-5 mb-3 shadow-sm">
-      <p className="text-sm font-semibold text-blue-600">{start} - {end}</p>
+    <div
+      className={`bg-white border-l-4 rounded-sm px-4 py-5 mb-3 lg:mb-0 shadow-sm ${cardStyle}`}
+    >
+      <p className="text-sm font-semibold">
+        {start} - {end}
+      </p>
       <p className="font-bold text-gray-900 py-2">{description}</p>
-      <p className="text-sm text-gray-500 ">📍 Lab 402</p>
+      <p className="text-sm text-gray-500 ">Clase #{num_class}</p>
     </div>
   );
 };

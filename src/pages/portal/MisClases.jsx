@@ -4,6 +4,7 @@ import CardDate from "../../components/Portal/CardDate";
 import { supabase } from "../../supabaseClient";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { HiOutlineCalendar } from "react-icons/hi2";
 
 function MisClases() {
   const weekDay = [
@@ -65,10 +66,16 @@ function MisClases() {
 
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-10">
+    <div className="min-h-screen bg-gray-50 pb-10 flex flex-col items-center">
       <Header />
-      <div className="max-w-lg mx-auto px-4 pt-8">
-        <h1 className="text-2xl font-bold text-gray-900">Weekly Schedule</h1>
+      <div className="w-full max-w-lg lg:max-w-5xl px-4 pt-8">
+        <div className="flex items-center gap-3">
+          <HiOutlineCalendar
+            className="h-8 w-8 shrink-0 text-gray-900"
+            aria-hidden
+          />
+          <h1 className="text-2xl font-bold text-gray-900">Weekly Schedule</h1>
+        </div>
         <p className="text-sm text-gray-500 mt-1">
           October 21 – October 27, 2024
         </p>
@@ -77,23 +84,37 @@ function MisClases() {
           <span className="text-sm font-semibold">This Week</span>
           <button className="text-gray-600 font-bold cursor-pointer">›</button>
         </div>
-        {dataClass.map((clase) => {
-          const [year, mon, day] = clase.date.split("-");
-          const formatTime = (time) => time.slice(0, 5);
-          const fecha = new Date(year, mon - 1, day);
-          const dayW = weekDay[fecha.getDay()];
+        <div
+          className={`grid w-full grid-cols-1 gap-4 ${
+            dataClass.length >= 3
+              ? "lg:grid-cols-3"
+              : dataClass.length === 2
+              ? "lg:grid-cols-2"
+              : "lg:grid-cols-1"
+          }`}
+        >
+          {dataClass.map((clase) => {
+            const [year, mon, day] = clase.date.split("-");
+            const formatTime = (time) => time.slice(0, 5);
+            const fecha = new Date(year, mon - 1, day);
+            const dayW = weekDay[fecha.getDay()];
 
-          return (
-            <div key={clase.id}>
-              <CardDate day={day} dayNum={dayW} />
-              <ClaseCard
-                description={clase.tipo}
-                start={formatTime(clase.start)}
-                end={formatTime(clase.end)}
-              />
-            </div>
-          );
-        })}
+            return (
+              <div
+                key={clase.id}
+                className="flex w-full flex-col"
+              >
+                <CardDate day={day} dayNum={dayW} />
+                <ClaseCard
+                  description={clase.tipo}
+                  start={formatTime(clase.start)}
+                  end={formatTime(clase.end)}
+                  num_class={clase.num_class}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
