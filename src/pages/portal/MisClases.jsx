@@ -8,8 +8,6 @@ import Header from "../../components/Header";
 import ClaseCard from "../../components/Portal/ClaseCard";
 import CardDate from "../../components/Portal/CardDate";
 import ProfileCard from "../../components/Portal/ProfileCard";
-//ICONS
-import { FcCalendar } from "react-icons/fc";
 
 function MisClases() {
   const weekDay = [
@@ -21,22 +19,30 @@ function MisClases() {
     "Viernes",
     "Sábado",
   ];
-
   const { state } = useLocation();
   const client = state?.client;
   const clientId = state?.client?.id;
-  const clientName = client?.name || client?.nombre || "Estudiante";
   const clientEmail = client?.email || "No email available";
-  const clientPhone = client?.telefono || client?.phone || "No phone available";
-  const initials = clientName
-    .split(" ")
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase())
-    .join("");
 
+  const [clientName, setClientName] = useState("Estudiante");
+  const [clientPhone, setClientPhone] = useState("No disponible");
   const [dataClass, setDataClass] = useState([]);
   const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function obtenerNombre() {
+      const { data } = await supabase
+        .from("clients")
+        .select("name_complete, phone")
+        .eq("id", clientId)
+        .single();
+
+        if (data) {
+          setClientName(data.name_complete);
+          setClientPhone(data.phone);       // ← guarda el phone
+        }
+    }
+    obtenerNombre();
+  }, [clientId]);
 
   useEffect(() => {
     async function obtenerClases() {
@@ -56,6 +62,13 @@ function MisClases() {
 
     obtenerClases();
   }, [clientId]);
+
+  const initials = clientName
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase())
+    .join("");
 
   if (loading) {
     return (
@@ -79,7 +92,6 @@ function MisClases() {
     );
   }
 
-
   return (
     <div className="min-h-screen bg-gray-50 pb-10 flex flex-col items-center">
       <Header />
@@ -91,11 +103,9 @@ function MisClases() {
           initials={initials}
         />
         <div className="flex items-center gap-3 lg:justify-center">
-          <FcCalendar
-            className="h-8 w-8 shrink-0 "
-            aria-hidden
-          />
-          <h1 className="text-xl lg:text-3xl font-bold text-gray-900">Dias y horas de clases</h1>
+          <h1 className="text-xl lg:text-3xl font-bold text-gray-900">
+            Dias y horas de clases
+          </h1>
         </div>
         <p className="text-sm text-gray-500 pt-4 pb-6 lg:text-center">
           October 21 – October 27, 2024
@@ -116,10 +126,7 @@ function MisClases() {
             const dayW = weekDay[fecha.getDay()];
 
             return (
-              <div
-                key={clase.id}
-                className="flex w-full flex-col"
-              >
+              <div key={clase.id} className="flex w-full flex-col">
                 <CardDate day={day} dayNum={dayW} />
                 <ClaseCard
                   description={clase.tipo}
