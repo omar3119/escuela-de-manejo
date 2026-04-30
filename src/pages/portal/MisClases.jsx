@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import Header from "../../components/Header";
 import ClaseCard from "../../components/Portal/ClaseCard";
 import CardDate from "../../components/Portal/CardDate";
+import ProfileCard from "../../components/Portal/ProfileCard";
 //ICONS
 import { FcCalendar } from "react-icons/fc";
 
@@ -22,7 +23,17 @@ function MisClases() {
   ];
 
   const { state } = useLocation();
+  const client = state?.client;
   const clientId = state?.client?.id;
+  const clientName = client?.name || client?.nombre || "Estudiante";
+  const clientEmail = client?.email || "No email available";
+  const clientPhone = client?.telefono || client?.phone || "No phone available";
+  const initials = clientName
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase())
+    .join("");
 
   const [dataClass, setDataClass] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -73,14 +84,20 @@ function MisClases() {
     <div className="min-h-screen bg-gray-50 pb-10 flex flex-col items-center">
       <Header />
       <div className="w-full max-w-lg lg:max-w-5xl px-4 pt-8">
-        <div className="flex items-center gap-3">
+        <ProfileCard
+          clientName={clientName}
+          clientEmail={clientEmail}
+          clientPhone={clientPhone}
+          initials={initials}
+        />
+        <div className="flex items-center gap-3 lg:justify-center">
           <FcCalendar
             className="h-8 w-8 shrink-0 "
             aria-hidden
           />
           <h1 className="text-xl lg:text-3xl font-bold text-gray-900">Dias y horas de clases</h1>
         </div>
-        <p className="text-sm text-gray-500 pt-4 pb-6">
+        <p className="text-sm text-gray-500 pt-4 pb-6 lg:text-center">
           October 21 – October 27, 2024
         </p>
         <div
