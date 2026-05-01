@@ -39,7 +39,7 @@ export default function Portal() {
         <div className="flex  items-center gap-2 mb-10">
           <Link
             to="/"
-            className="inline-flex items-center gap-1 text-sm   transition text-blue-400 hover:text-blue-700"
+            className="inline-flex items-center gap-1 text-sm   transition text-blue-600 hover:text-blue-700"
           >
             <FaArrowLeft className="" />
              Regresar
@@ -57,7 +57,7 @@ export default function Portal() {
           id="portal-email"
           type="email"
           placeholder="smith@gmail.com"
-          className="mb-3 w-full rounded-xl border border-gray-300 bg-gray-100 px-4 py-3 text-slate-700 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none"
+          className="mb-3 w-full rounded-md border border-gray-300 bg-gray-100 px-4 py-3 text-slate-700 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none"
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
@@ -68,13 +68,13 @@ export default function Portal() {
           id="portal-cedula"
           type="text"
           placeholder="8-123-456"
-          className="mb-5 w-full rounded-xl border border-gray-300 bg-gray-100 px-4 py-3 text-slate-700 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none"
+          className="mb-5 w-full rounded-md border border-gray-300 bg-gray-100 px-4 py-3 text-slate-700 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none"
           value={cedula}
           onChange={e => setCedula(e.target.value)}
         />
         <button
           onClick={handleAccess}
-          className="w-full cursor-pointer rounded-xl bg-blue-700 py-3 font-semibold text-white transition hover:bg-blue-800"
+          className="w-full cursor-pointer rounded-md bg-blue-700 py-3 font-semibold text-white transition hover:bg-blue-800"
         >
           Ver mis clases
         </button>
