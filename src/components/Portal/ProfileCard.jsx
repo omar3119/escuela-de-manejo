@@ -11,7 +11,7 @@ function ProfileCard({ clientName, clientEmail, clientPhone, initials }) {
         <div className="min-w-0 lg:text-center">
           <p className="truncate text-2xl font-bold text-slate-800">{clientName}</p>
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-            Student profile
+            Perfil del Alumno
           </p>
         </div>
       </div>

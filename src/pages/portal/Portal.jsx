@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { supabase } from '../../supabaseClient'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Portal() {
   const [email, setEmail] = useState('')
@@ -35,6 +36,15 @@ export default function Portal() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="w-full max-w-sm rounded-2xl border border-gray-300 bg-white p-7 shadow-sm">
+        <div className="flex  items-center gap-2 mb-10">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1 text-sm   transition text-blue-400 hover:text-blue-700"
+          >
+            <FaArrowLeft className="" />
+             Regresar
+          </Link>
+        </div>
         <h1 className="mb-2 text-center text-2xl font-bold text-slate-800">Portal del Alumno</h1>
         <p className="mb-6 text-center text-sm text-gray-500">Ingresa tu información para ver tus clases</p>
 
