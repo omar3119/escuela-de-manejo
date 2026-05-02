@@ -1,4 +1,4 @@
-const ClaseCard = ({ start, end, description, num_class }) => {
+const ClaseCard = ({ start, end, description, num_class,day, today }) => {
   const borderStyles = [
     "border-l-blue-600 text-blue-800",
     "border-l-emerald-600 text-emerald-800",
@@ -13,7 +13,7 @@ const ClaseCard = ({ start, end, description, num_class }) => {
 
   return (
     <div
-      className={`bg-white border-l-4 rounded-sm px-4 py-5 mb-3 lg:mb-0 shadow-sm ${cardStyle}`}
+      className={`bg-white border-l-4 rounded-sm px-4 py-5 mb-3 lg:mb-0 shadow-sm  ${day == today ? "border-2 border-primary text-primary" : `text-black bg-[#F0F3FF] ${cardStyle}` }  `}
     >
       <p className="text-sm font-semibold">
         {start} - {end}

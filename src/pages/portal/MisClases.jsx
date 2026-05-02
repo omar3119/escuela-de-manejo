@@ -120,19 +120,23 @@ function MisClases() {
           }`}
         >
           {dataClass.map((clase) => {
+            const todayDate = new Date();
             const [year, mon, day] = clase.date.split("-");
             const formatTime = (time) => time.slice(0, 5);
             const fecha = new Date(year, mon - 1, day);
             const dayW = weekDay[fecha.getDay()];
+            const todayDay = todayDate.getDate();
 
             return (
               <div key={clase.id} className="flex w-full flex-col">
-                <CardDate day={day} dayNum={dayW} />
+                <CardDate day={day} today={todayDay} dayNum={dayW} />
                 <ClaseCard
                   description={clase.tipo}
                   start={formatTime(clase.start)}
                   end={formatTime(clase.end)}
                   num_class={clase.num_class}
+                  day={day}
+                  today={todayDay}
                 />
               </div>
             );
