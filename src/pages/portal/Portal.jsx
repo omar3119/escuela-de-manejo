@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { supabase } from '../../supabaseClient'
 import { Link, useNavigate } from 'react-router-dom'
 import { FaArrowLeft } from "react-icons/fa";
@@ -7,42 +7,46 @@ export default function Portal() {
   const [email, setEmail] = useState('')
   const [cedula, setCedula] = useState('')
   const [error, setError] = useState('')
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
+  useEffect(() => {
+    const savedClient = JSON.parse(sessionStorage.getItem('portalClient') || 'null')
+    if (savedClient) {
+      navigate('/portal/mis-clases', { state: { client: savedClient } })
+    }
+  }, []);
+  
   const handleAccess = async () => {
     setError('')
 
-    const { data, error } = await supabase
+    // CAMBIADO: filtra en el servidor, no trae todos los clientes al frontend
+    const { data, error: supabaseError } = await supabase
       .from('clients')
       .select('*')
+      .eq('email', email.toLowerCase().trim())
+      .eq('cedula', cedula.trim())
+      .single()
 
-    if (error) {
-      setError('No pudimos validar tus datos. Intenta nuevamente.')
+    if (supabaseError || !data) {
+      setError('No encontramos tu información, verifica tu correo y cédula')
       return
     }
 
-    const result = data?.filter(client =>
-      client.email?.toLowerCase().trim() === email.toLowerCase().trim() &&
-      client.cedula?.toString().trim() === cedula.trim()
-    )
-
-    if (!result || result.length === 0) {
-      setError('No encontramos tu información, verifica tu correo y cédula')
-    } else {
-      navigate('/portal/mis-clases', { state: { client: result[0] } })
-    }
+    // AGREGADO: guarda el cliente en sessionStorage para proteger la ruta al recargar
+    sessionStorage.removeItem('portalClient')
+    sessionStorage.setItem('portalClient', JSON.stringify(data))
+    navigate('/portal/mis-clases', { state: { client: data } })
   }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="w-full max-w-sm rounded-2xl border border-gray-300 bg-white p-7 shadow-sm">
-        <div className="flex  items-center gap-2 mb-10">
+        <div className="flex items-center gap-2 mb-10">
           <Link
             to="/"
-            className="inline-flex items-center gap-1 text-sm   transition text-blue-600 hover:text-blue-700"
+            className="inline-flex items-center gap-1 text-sm transition text-blue-600 hover:text-blue-700"
           >
-            <FaArrowLeft className="" />
-             Regresar
+            <FaArrowLeft />
+            Regresar
           </Link>
         </div>
         <h1 className="mb-2 text-center text-2xl font-bold text-slate-800">Portal del Alumno</h1>

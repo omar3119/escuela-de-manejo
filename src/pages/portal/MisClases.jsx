@@ -2,7 +2,7 @@
 import { supabase } from "../../supabaseClient";
 //REACT AND REACT ROUTER
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 //COMPONENTS
 import Header from "../../components/Header";
 import ClaseCard from "../../components/Portal/ClaseCard";
@@ -10,24 +10,30 @@ import CardDate from "../../components/Portal/CardDate";
 import ProfileCard from "../../components/Portal/ProfileCard";
 
 function MisClases() {
-  const weekDay = [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miércoles",
-    "Jueves",
-    "Viernes",
-    "Sábado",
-  ];
+  const weekDay = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+
   const { state } = useLocation();
-  const client = state?.client;
-  const clientId = state?.client?.id;
+  const navigate = useNavigate();
+
+  // CAMBIADO: clientId ahora lee de client (que incluye sessionStorage), antes solo leía state
+  const client = state?.client || JSON.parse(sessionStorage.getItem("portalClient") || "null");
+  const clientId = client?.id;
   const clientEmail = client?.email || "No email available";
 
   const [clientName, setClientName] = useState("Estudiante");
   const [clientPhone, setClientPhone] = useState("No disponible");
   const [dataClass, setDataClass] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // CAMBIADO: false en vez de true para no mostrar spinner antes de verificar sesión
+  const [loading, setLoading] = useState(false);
+
+  // AGREGADO: protección de ruta dentro de useEffect (React exige que navigate vaya aquí)
+  useEffect(() => {
+    if (!client || !clientId) {
+      sessionStorage.removeItem("portalClient");
+      navigate("/portal", { replace: true });
+    }
+  }, []);
+
   useEffect(() => {
     async function obtenerNombre() {
       const { data } = await supabase
@@ -36,12 +42,13 @@ function MisClases() {
         .eq("id", clientId)
         .single();
 
-        if (data) {
-          setClientName(data.name_complete);
-          setClientPhone(data.phone);       // ← guarda el phone
-        }
+      if (data) {
+        setClientName(data.name_complete);
+        setClientPhone(data.phone);
+      }
     }
-    obtenerNombre();
+    // AGREGADO: guard para no llamar a supabase con clientId undefined
+    if (clientId) obtenerNombre();
   }, [clientId]);
 
   useEffect(() => {
@@ -59,8 +66,8 @@ function MisClases() {
       }
       setLoading(false);
     }
-
-    obtenerClases();
+    // AGREGADO: guard para no llamar a supabase con clientId undefined
+    if (clientId) obtenerClases();
   }, [clientId]);
 
   const initials = clientName
@@ -74,9 +81,7 @@ function MisClases() {
     return (
       <div className="min-h-screen bg-gray-50">
         <Header />
-        <p className="text-sm text-gray-400 text-center pt-10">
-          Cargando clases...
-        </p>
+        <p className="text-sm text-gray-400 text-center pt-10">Cargando clases...</p>
       </div>
     );
   }
@@ -85,9 +90,7 @@ function MisClases() {
     return (
       <div className="min-h-screen bg-gray-50">
         <Header />
-        <p className="text-sm text-gray-400 text-center pt-10">
-          No tienes clases registradas.
-        </p>
+        <p className="text-sm text-gray-400 text-center pt-10">No tienes clases registradas.</p>
       </div>
     );
   }
@@ -103,20 +106,16 @@ function MisClases() {
           initials={initials}
         />
         <div className="flex items-center gap-3 lg:justify-center">
-          <h1 className="text-xl lg:text-3xl font-bold text-gray-900">
-            Dias y horas de clases
-          </h1>
+          <h1 className="text-xl lg:text-3xl font-bold text-gray-900">Dias y horas de clases</h1>
         </div>
         <p className="text-sm text-gray-500 pt-4 pb-6 lg:text-center">
           October 21 – October 27, 2024
         </p>
         <div
           className={`grid w-full grid-cols-1 gap-6 ${
-            dataClass.length >= 3
-              ? "lg:grid-cols-3"
-              : dataClass.length === 2
-              ? "lg:grid-cols-2"
-              : "lg:grid-cols-1"
+            dataClass.length >= 3 ? "lg:grid-cols-3"
+            : dataClass.length === 2 ? "lg:grid-cols-2"
+            : "lg:grid-cols-1"
           }`}
         >
           {dataClass.map((clase) => {
