@@ -8,13 +8,14 @@ export default function Portal() {
   const [cedula, setCedula] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate();
+  
   useEffect(() => {
     const savedClient = JSON.parse(sessionStorage.getItem('portalClient') || 'null')
     if (savedClient) {
       navigate('/portal/mis-clases', { state: { client: savedClient } })
     }
   }, []);
-  
+
   const handleAccess = async () => {
     setError('')
 

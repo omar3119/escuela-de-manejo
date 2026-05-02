@@ -3,8 +3,9 @@ import { supabase } from "../../supabaseClient";
 //REACT AND REACT ROUTER
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+
 //COMPONENTS
-import Header from "../../components/Header";
+import HeaderClass from "../../components/Portal/HeaderClass";
 import ClaseCard from "../../components/Portal/ClaseCard";
 import CardDate from "../../components/Portal/CardDate";
 import ProfileCard from "../../components/Portal/ProfileCard";
@@ -80,24 +81,17 @@ function MisClases() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <Header />
+        <HeaderClass />
         <p className="text-sm text-gray-400 text-center pt-10">Cargando clases...</p>
       </div>
     );
   }
 
-  if (dataClass.length === 0) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        <p className="text-sm text-gray-400 text-center pt-10">No tienes clases registradas.</p>
-      </div>
-    );
-  }
+  
 
   return (
     <div className="min-h-screen bg-gray-50 pb-10 flex flex-col items-center">
-      <Header />
+      <HeaderClass/>
       <div className="w-full max-w-lg lg:max-w-5xl px-4 pt-8">
         <ProfileCard
           clientName={clientName}
