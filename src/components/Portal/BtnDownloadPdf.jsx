@@ -18,8 +18,8 @@ const BtnDownloadPdf = () => {
   };
   return (
     <div className="w-full pt-5 ">
-      <div className="rounded  bg-white p-3">
-        <div className="flex items-center gap-3 rounded-xl border border-slate-100  px-3 py-2.5">
+      <div className="rounded  bg-white">
+        <div className="w-full flex items-center gap-3 rounded-xl border border-slate-100  px-3 py-2.5">
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-red-50 text-red-500">
             <FiFileText className="h-6 w-6" aria-hidden />
           </div>
@@ -34,9 +34,9 @@ const BtnDownloadPdf = () => {
         <button
           type="button"
           onClick={handleDownload}
-          className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-blue-200 bg-white px-4 py-3 text-lg font-semibold text-blue-700 transition hover:border-blue-300 hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 cursor-pointer"
+          className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-sm border border-blue-300 bg-blue-50 px-4 py-3 text-lg font-semibold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 cursor-pointer"
         >
-          <FiDownload className="h-5 w-5 shrink-0 text-blue-600" aria-hidden />
+          <FiDownload className="h-5 w-5 shrink-0 text-blue-800" aria-hidden />
           Descargar Material
         </button>
       </div>
