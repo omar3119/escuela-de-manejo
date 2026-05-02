@@ -114,9 +114,13 @@ function MisClases() {
           clientPhone={clientPhone}
           initials={initials}
         />
-        <section className="mb-15">
-          <h3 className="text-xl lg:text-3xl font-bold pt-6">Material de estudio</h3>
+        <section className="w-full flex justify-center">
+          <div className="w-full mb-15 rounded-xl border border-slate-100 bg-white p-6 shadow-sm max-w-3xl">
+          <h3 className="pt-1 text-xl font-bold text-primary lg:text-3xl">
+            Material de estudio
+          </h3>
           <BtnDownloadPdf />
+          </div>
         </section>{" "}
         <div className="flex items-center gap-3 lg:justify-center">
           <h3 className="text-xl lg:text-3xl font-bold text-gray-900">
