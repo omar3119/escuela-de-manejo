@@ -119,7 +119,7 @@ function MisClases() {
        </div>
         <div className="w-full lg:w-2/3">
           <div className="h-full w-full rounded-lg border border-slate-100 bg-white p-6">
-          <h3 className="pt-1 text-xl font-bold text-primary lg:text-3xl">
+          <h3 className="pt-1 text-xl font-bold text-primary lg:text-2xl">
             Material de estudio
           </h3>
           <BtnDownloadPdf />

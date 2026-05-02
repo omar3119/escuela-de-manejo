@@ -8,7 +8,7 @@ function ProfileCard({ clientName, clientEmail, clientPhone, initials }) {
         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xl font-bold text-blue-700 lg:h-20 lg:w-20 lg:text-2xl">
           {initials || "ST"}
         </div>
-        <div className="min-w-0 lg:text-center">
+        <div className="min-w-0 ">
           <p className="truncate text-2xl font-bold text-slate-800">{clientName}</p>
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
             Perfil del Alumno
