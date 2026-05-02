@@ -34,7 +34,7 @@ const BtnDownloadPdf = () => {
         <button
           type="button"
           onClick={handleDownload}
-          className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-sm border border-blue-300 bg-blue-50 px-4 py-3 text-lg font-semibold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 cursor-pointer"
+          className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-sm border border-blue-300 bg-blue-50 px-4 py-2 text-base font-semibold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 cursor-pointer"
         >
           <FiDownload className="h-5 w-5 shrink-0 text-blue-800" aria-hidden />
           Descargar Material
