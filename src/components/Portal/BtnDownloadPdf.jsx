@@ -11,10 +11,10 @@ const BtnDownloadPdf = () => {
 
     const link = document.createElement("a");
     link.href = blobUrl;
-    link.download = "Educacion vial.pdf"; // nombre con el que se descarga
+    link.download = "Educacion vial.pdf";
     link.click();
 
-    window.URL.revokeObjectURL(blobUrl); // limpia la memoria
+    window.URL.revokeObjectURL(blobUrl);
   };
   return (
     <div className="w-full pt-5 ">
@@ -27,7 +27,7 @@ const BtnDownloadPdf = () => {
             <p className="truncate text-base font-semibold text-slate-700">
               Seguridad vial.pdf
             </p>
-            <p className="text-sm text-slate-400">Manual Completo • 4.2 MB</p>
+            <p className="text-sm text-slate-400">Manual Completo • 17.89 MB</p>
           </div>
         </div>
 
