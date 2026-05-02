@@ -11,10 +11,17 @@ const ClaseCard = ({ start, end, description, num_class,day, today }) => {
     : 0;
   const cardStyle = borderStyles[styleIndex];
 
+  const isToday = day == today;
+
   return (
     <div
-      className={`bg-white border-l-4 rounded-sm px-4 py-5 mb-3 lg:mb-0 shadow-sm  ${day == today ? "border-2 border-primary text-primary" : `text-black bg-[#F0F3FF] ${cardStyle}` }  `}
+      className={`relative bg-white border-l-4 rounded-sm px-4 py-5 mb-3 lg:mb-0 shadow-sm  ${isToday ? "border-2 border-primary text-primary" : `text-black bg-[#F0F3FF] ${cardStyle}` }  `}
     >
+      {isToday && (
+        <span className="absolute right-2 top-2 rounded-full bg-green-500 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+          Hoy
+        </span>
+      )}
       <p className="text-sm font-semibold">
         {start} - {end}
       </p>
