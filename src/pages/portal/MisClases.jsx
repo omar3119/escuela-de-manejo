@@ -115,7 +115,7 @@ function MisClases() {
           initials={initials}
         />
         <section className="w-full flex justify-center">
-          <div className="w-full mb-15 rounded-xl border border-slate-100 bg-white p-6 shadow-sm max-w-3xl">
+          <div className="w-full mb-15 rounded-lg border border-slate-100 bg-white p-6 max-w-3xl">
           <h3 className="pt-1 text-xl font-bold text-primary lg:text-3xl">
             Material de estudio
           </h3>

@@ -3,7 +3,7 @@ import { FiPhone } from "react-icons/fi";
 
 function ProfileCard({ clientName, clientEmail, clientPhone, initials }) {
   return (
-    <div className="mb-8 rounded-2xl border border-slate-200 bg-linear-to-br from-white to-slate-50 px-5 py-6 shadow-sm lg:mx-auto lg:max-w-3xl">
+    <div className="mb-8 rounded-lg border border-slate-200 bg-linear-to-br from-white to-slate-50 px-5 py-6  lg:mx-auto lg:max-w-3xl">
       <div className="flex items-center gap-4 lg:flex-col lg:justify-center">
         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xl font-bold text-blue-700 lg:h-20 lg:w-20 lg:text-2xl">
           {initials || "ST"}
