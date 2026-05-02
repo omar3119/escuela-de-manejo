@@ -3,7 +3,7 @@ import { FaArrowRightToBracket } from "react-icons/fa6";
 const HeaderClass = ({closeSesion}) => {
   return (
     <Header>
-      <div onClick={closeSesion} className="flex items-center gap-2">
+      <div onClick={closeSesion} className="flex items-center gap-2 cursor-pointer hover:text-red-500">
         <FaArrowRightToBracket />
         <span>Salir</span>
       </div>

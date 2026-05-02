@@ -108,28 +108,30 @@ function MisClases() {
     <div className="min-h-screen bg-gray-50 pb-10 flex flex-col items-center">
       <HeaderClass closeSesion={closeSesion} />
       <div className="w-full max-w-lg lg:max-w-5xl px-4 pt-8">
+       <div className="w-full flex flex-col gap-5 lg:flex-row lg:items-stretch">
+       <div className="w-full lg:w-2/3.5">
         <ProfileCard
-          clientName={clientName}
-          clientEmail={clientEmail}
-          clientPhone={clientPhone}
-          initials={initials}
-        />
-        <section className="w-full flex justify-center">
-          <div className="w-full mb-15 rounded-lg border border-slate-100 bg-white p-6 max-w-3xl">
+           clientName={clientName}
+           clientEmail={clientEmail}
+           clientPhone={clientPhone}
+           initials={initials}
+         />
+       </div>
+        <div className="w-full lg:w-2/3">
+          <div className="h-full w-full rounded-lg border border-slate-100 bg-white p-6">
           <h3 className="pt-1 text-xl font-bold text-primary lg:text-3xl">
             Material de estudio
           </h3>
           <BtnDownloadPdf />
           </div>
-        </section>{" "}
-        <div className="flex items-center gap-3 lg:justify-center">
+        </div>
+       </div>
+        <div className="flex items-center gap-3 lg:justify-center py-8">
           <h3 className="text-xl lg:text-3xl font-bold text-gray-900">
             Dias y horas de clases
           </h3>
         </div>
-        <p className="text-sm text-gray-500 pt-4 pb-6 lg:text-center">
-          October 21 – October 27, 2024
-        </p>
+      
         <div
           className={`grid w-full grid-cols-1 gap-6 ${
             dataClass.length >= 3
