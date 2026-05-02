@@ -9,15 +9,26 @@ import HeaderClass from "../../components/Portal/HeaderClass";
 import ClaseCard from "../../components/Portal/ClaseCard";
 import CardDate from "../../components/Portal/CardDate";
 import ProfileCard from "../../components/Portal/ProfileCard";
+import BtnDownloadPdf from "../../components/Portal/BtnDownloadPdf";
 
 function MisClases() {
-  const weekDay = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+  const weekDay = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+  ];
 
   const { state } = useLocation();
   const navigate = useNavigate();
 
   // CAMBIADO: clientId ahora lee de client (que incluye sessionStorage), antes solo leía state
-  const client = state?.client || JSON.parse(sessionStorage.getItem("portalClient") || "null");
+  const client =
+    state?.client ||
+    JSON.parse(sessionStorage.getItem("portalClient") || "null");
   const clientId = client?.id;
   const clientEmail = client?.email || "No email available";
 
@@ -82,16 +93,20 @@ function MisClases() {
     return (
       <div className="min-h-screen bg-gray-50">
         <HeaderClass />
-        <p className="text-sm text-gray-400 text-center pt-10">Cargando clases...</p>
+        <p className="text-sm text-gray-400 text-center pt-10">
+          Cargando clases...
+        </p>
       </div>
     );
   }
 
-  
-
+  function closeSesion() {
+    sessionStorage.removeItem("portalClient");
+    navigate("/");
+  }
   return (
     <div className="min-h-screen bg-gray-50 pb-10 flex flex-col items-center">
-      <HeaderClass/>
+      <HeaderClass closeSesion={closeSesion} />
       <div className="w-full max-w-lg lg:max-w-5xl px-4 pt-8">
         <ProfileCard
           clientName={clientName}
@@ -99,17 +114,25 @@ function MisClases() {
           clientPhone={clientPhone}
           initials={initials}
         />
+        <section className="mb-15">
+          <h3 className="text-xl lg:text-3xl font-bold pt-6">Material de estudio</h3>
+          <BtnDownloadPdf />
+        </section>{" "}
         <div className="flex items-center gap-3 lg:justify-center">
-          <h1 className="text-xl lg:text-3xl font-bold text-gray-900">Dias y horas de clases</h1>
+          <h3 className="text-xl lg:text-3xl font-bold text-gray-900">
+            Dias y horas de clases
+          </h3>
         </div>
         <p className="text-sm text-gray-500 pt-4 pb-6 lg:text-center">
           October 21 – October 27, 2024
         </p>
         <div
           className={`grid w-full grid-cols-1 gap-6 ${
-            dataClass.length >= 3 ? "lg:grid-cols-3"
-            : dataClass.length === 2 ? "lg:grid-cols-2"
-            : "lg:grid-cols-1"
+            dataClass.length >= 3
+              ? "lg:grid-cols-3"
+              : dataClass.length === 2
+                ? "lg:grid-cols-2"
+                : "lg:grid-cols-1"
           }`}
         >
           {dataClass.map((clase) => {

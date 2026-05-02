@@ -8,9 +8,9 @@ export default function Portal() {
   const [cedula, setCedula] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate();
-  
+
   useEffect(() => {
-    const savedClient = JSON.parse(sessionStorage.getItem('portalClient') || 'null')
+    const savedClient = JSON.parse(sessionStorage.getItem('portalClient') || 'null');
     if (savedClient) {
       navigate('/portal/mis-clases', { state: { client: savedClient } })
     }
@@ -33,7 +33,7 @@ export default function Portal() {
     }
 
     // AGREGADO: guarda el cliente en sessionStorage para proteger la ruta al recargar
-    sessionStorage.removeItem('portalClient')
+    sessionStorage.removeItem('portalClient');
     sessionStorage.setItem('portalClient', JSON.stringify(data))
     navigate('/portal/mis-clases', { state: { client: data } })
   }
