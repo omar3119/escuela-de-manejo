@@ -59,11 +59,12 @@ const Contact = () => {
             <Formulary />
           </div>
 
-          <div className="w-full flex flex-col justify-between">
+          <div className="w-full flex flex-col gap-5 ">
             <div className="w-full">
               <CardContact />
             </div>
-            <div className="border rounded-2xl">
+            <div className="border-2 border-grey rounded-lg">
+            <MapaSchool/>
 
             </div>
           </div>

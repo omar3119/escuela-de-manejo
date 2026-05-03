@@ -65,10 +65,10 @@ export default function MissionBriefing() {
   const inputStyle =
     "w-full bg-gray-100 rounded-md px-4 py-3 text-slate-800 text-sm outline-none focus:ring-2 focus:ring-slate-800 focus:bg-white transition placeholder:text-gray-400";
   return (
-    <div className="bg-white rounded-xl shadow-md py-10 px-5 w-full">
+    <div className="h-full bg-white rounded-xl shadow-md py-10 px-5 w-full">
       {/* Title */}
       <div className="flex items-center gap-3 mb-8">
-        <span className="w-1 h-9 bg-secondary rounded-full block" />
+        <span className="w-1 h-9 bg-bluee rounded-full block" />
         <h2 className="text-2xl font-bold text-slate-800 tracking-tight">
           Solicitud de Información
         </h2>
@@ -143,7 +143,7 @@ export default function MissionBriefing() {
         {/* Button */}
         <button
           type="submit"
-          className="mt-2 cursor-pointer flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-orange-500 text-white text-sm font-bold tracking-widest uppercase rounded-md transition-colors duration-200"
+          className="mt-2 cursor-pointer flex items-center gap-2 px-6 py-3 bg-bluee hover:bg-orange-500 text-white text-sm font-bold tracking-widest uppercase rounded-md transition-colors duration-200"
         >
           Enviar
           <LuSend className="text-xl" />
